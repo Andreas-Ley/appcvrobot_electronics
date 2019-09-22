@@ -1,0 +1,648 @@
+EESchema Schematic File Version 4
+LIBS:AppCVRobot-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Driver_Motor:Pololu_Breakout_A4988 MD_L1
+U 1 1 5D86D179
+P 4000 3950
+F 0 "MD_L1" H 4700 4550 50  0000 C CNN
+F 1 "Pololu_Breakout_A4988" H 4950 4650 50  0000 C CNN
+F 2 "Module:Pololu_Breakout-16_15.2x20.3mm" H 4275 3200 50  0001 L CNN
+F 3 "https://www.pololu.com/product/2980/pictures" H 4100 3650 50  0001 C CNN
+	1    4000 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Driver_Motor:Pololu_Breakout_A4988 MD_R1
+U 1 1 5D876F4D
+P 4000 6200
+F 0 "MD_R1" H 4700 6600 50  0000 C CNN
+F 1 "Pololu_Breakout_A4988" H 4900 6700 50  0000 C CNN
+F 2 "Module:Pololu_Breakout-16_15.2x20.3mm" H 4275 5450 50  0001 L CNN
+F 3 "https://www.pololu.com/product/2980/pictures" H 4100 5900 50  0001 C CNN
+	1    4000 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C_MD_L1
+U 1 1 5D8782D3
+P 2800 4400
+F 0 "C_MD_L1" H 2918 4446 50  0000 L CNN
+F 1 "100uF" H 2918 4355 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 2838 4250 50  0001 C CNN
+F 3 "~" H 2800 4400 50  0001 C CNN
+	1    2800 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C_MD_L2
+U 1 1 5D878D95
+P 2850 6650
+F 0 "C_MD_L2" H 2968 6696 50  0000 L CNN
+F 1 "100uF" H 2968 6605 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 2888 6500 50  0001 C CNN
+F 3 "~" H 2850 6650 50  0001 C CNN
+	1    2850 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x06_Male Jumper_Motor_Step1
+U 1 1 5D8802A0
+P 1350 5050
+F 0 "Jumper_Motor_Step1" H 1458 5431 50  0000 C CNN
+F 1 "Conn_01x06_Male" H 1458 5340 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 1350 5050 50  0001 C CNN
+F 3 "~" H 1350 5050 50  0001 C CNN
+	1    1350 5050
+	1    0    0    -1  
+$EndComp
+Text GLabel 1550 4950 2    50   Input ~ 0
+MS1
+Text GLabel 1550 5350 2    50   Input ~ 0
+MS3
+Text GLabel 3600 4250 0    50   Input ~ 0
+MS1
+Text GLabel 3600 6500 0    50   Input ~ 0
+MS1
+Text GLabel 3600 4350 0    50   Input ~ 0
+MS2
+Text GLabel 3600 6600 0    50   Input ~ 0
+MS2
+Text GLabel 3600 4450 0    50   Input ~ 0
+MS3
+Text GLabel 3600 6700 0    50   Input ~ 0
+MS3
+$Comp
+L power:+5V #PWR0101
+U 1 1 5D881952
+P 2750 2200
+F 0 "#PWR0101" H 2750 2050 50  0001 C CNN
+F 1 "+5V" V 2765 2328 50  0000 L CNN
+F 2 "" H 2750 2200 50  0001 C CNN
+F 3 "" H 2750 2200 50  0001 C CNN
+	1    2750 2200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+3.3V #PWR0102
+U 1 1 5D8820D7
+P 2750 2300
+F 0 "#PWR0102" H 2750 2150 50  0001 C CNN
+F 1 "+3.3V" V 2765 2428 50  0000 L CNN
+F 2 "" H 2750 2300 50  0001 C CNN
+F 3 "" H 2750 2300 50  0001 C CNN
+	1    2750 2300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5D882AE2
+P 2750 2400
+F 0 "#PWR0104" H 2750 2150 50  0001 C CNN
+F 1 "GND" V 2755 2272 50  0000 R CNN
+F 2 "" H 2750 2400 50  0001 C CNN
+F 3 "" H 2750 2400 50  0001 C CNN
+	1    2750 2400
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+BATT #PWR0109
+U 1 1 5D898B5F
+P 2800 4250
+F 0 "#PWR0109" H 2800 4100 50  0001 C CNN
+F 1 "+BATT" H 2815 4423 50  0000 C CNN
+F 2 "" H 2800 4250 50  0001 C CNN
+F 3 "" H 2800 4250 50  0001 C CNN
+	1    2800 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+BATT #PWR0111
+U 1 1 5D899AE0
+P 2850 6500
+F 0 "#PWR0111" H 2850 6350 50  0001 C CNN
+F 1 "+BATT" H 2865 6673 50  0000 C CNN
+F 2 "" H 2850 6500 50  0001 C CNN
+F 3 "" H 2850 6500 50  0001 C CNN
+	1    2850 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+BATT #PWR0115
+U 1 1 5D8A104B
+P 4200 3250
+F 0 "#PWR0115" H 4200 3100 50  0001 C CNN
+F 1 "+BATT" H 4215 3423 50  0000 C CNN
+F 2 "" H 4200 3250 50  0001 C CNN
+F 3 "" H 4200 3250 50  0001 C CNN
+	1    4200 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+BATT #PWR0116
+U 1 1 5D8A16C7
+P 4200 5500
+F 0 "#PWR0116" H 4200 5350 50  0001 C CNN
+F 1 "+BATT" H 4215 5673 50  0000 C CNN
+F 2 "" H 4200 5500 50  0001 C CNN
+F 3 "" H 4200 5500 50  0001 C CNN
+	1    4200 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0117
+U 1 1 5D8A1B7E
+P 4000 4750
+F 0 "#PWR0117" H 4000 4500 50  0001 C CNN
+F 1 "GND" H 4005 4577 50  0000 C CNN
+F 2 "" H 4000 4750 50  0001 C CNN
+F 3 "" H 4000 4750 50  0001 C CNN
+	1    4000 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0119
+U 1 1 5D8A3A28
+P 4000 7000
+F 0 "#PWR0119" H 4000 6750 50  0001 C CNN
+F 1 "GND" H 4005 6827 50  0000 C CNN
+F 2 "" H 4000 7000 50  0001 C CNN
+F 3 "" H 4000 7000 50  0001 C CNN
+	1    4000 7000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 5800 3600 5900
+Wire Wire Line
+	3600 3550 3600 3650
+Text GLabel 3600 4050 0    50   Input ~ 0
+Dir_L
+Text GLabel 3600 6300 0    50   Input ~ 0
+Dir_R
+Text GLabel 3600 3950 0    50   Input ~ 0
+Step_L
+Text GLabel 3600 6200 0    50   Input ~ 0
+Step_R
+Text GLabel 3600 3850 0    50   Input ~ 0
+Enable_Steppers
+Text GLabel 3600 6100 0    50   Input ~ 0
+Enable_Steppers
+$Comp
+L power:+BATT #PWR0103
+U 1 1 5D920FF7
+P 2750 1450
+F 0 "#PWR0103" H 2750 1300 50  0001 C CNN
+F 1 "+BATT" V 2765 1577 50  0000 L CNN
+F 2 "" H 2750 1450 50  0001 C CNN
+F 3 "" H 2750 1450 50  0001 C CNN
+	1    2750 1450
+	0    -1   -1   0   
+$EndComp
+Text GLabel 6450 3100 0    50   Input ~ 0
+Step_L
+Text GLabel 6450 3000 0    50   Input ~ 0
+Dir_L
+Text GLabel 6450 2300 0    50   Input ~ 0
+Step_R
+Text GLabel 6450 2200 0    50   Input ~ 0
+Dir_R
+$Comp
+L power:+3.3V #PWR0118
+U 1 1 5D93BF08
+P 4000 3250
+F 0 "#PWR0118" H 4000 3100 50  0001 C CNN
+F 1 "+3.3V" H 4015 3423 50  0000 C CNN
+F 2 "" H 4000 3250 50  0001 C CNN
+F 3 "" H 4000 3250 50  0001 C CNN
+	1    4000 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Custom:IZOKEEProMini U2
+U 1 1 5D9626D5
+P 7250 2600
+F 0 "U2" H 7150 3665 50  0000 C CNN
+F 1 "IZOKEEProMini" H 7150 3574 50  0000 C CNN
+F 2 "CustomFootprints:Arduino_Pro_Mini_Socket_IZOKEE" H 7150 1700 50  0001 C CNN
+F 3 "" H 7150 1700 50  0001 C CNN
+	1    7250 2600
+	1    0    0    -1  
+$EndComp
+Text GLabel 7550 3500 3    50   Input ~ 0
+I2C_SDA
+Text GLabel 7650 3500 3    50   Input ~ 0
+I2C_SCL
+$Comp
+L power:GND #PWR0120
+U 1 1 5D968341
+P 7150 3500
+F 0 "#PWR0120" H 7150 3250 50  0001 C CNN
+F 1 "GND" H 7155 3327 50  0000 C CNN
+F 2 "" H 7150 3500 50  0001 C CNN
+F 3 "" H 7150 3500 50  0001 C CNN
+	1    7150 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0121
+U 1 1 5D968847
+P 6450 2500
+F 0 "#PWR0121" H 6450 2250 50  0001 C CNN
+F 1 "GND" V 6455 2372 50  0000 R CNN
+F 2 "" H 6450 2500 50  0001 C CNN
+F 3 "" H 6450 2500 50  0001 C CNN
+	1    6450 2500
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0122
+U 1 1 5D968DD5
+P 7850 1900
+F 0 "#PWR0122" H 7850 1650 50  0001 C CNN
+F 1 "GND" V 7855 1772 50  0000 R CNN
+F 2 "" H 7850 1900 50  0001 C CNN
+F 3 "" H 7850 1900 50  0001 C CNN
+	1    7850 1900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+3.3V #PWR0124
+U 1 1 5D96A320
+P 7850 2100
+F 0 "#PWR0124" H 7850 1950 50  0001 C CNN
+F 1 "+3.3V" V 7865 2228 50  0000 L CNN
+F 2 "" H 7850 2100 50  0001 C CNN
+F 3 "" H 7850 2100 50  0001 C CNN
+	1    7850 2100
+	0    1    1    0   
+$EndComp
+Text GLabel 6450 3200 0    50   Input ~ 0
+Enable_Steppers
+$Comp
+L Connector_Generic:Conn_01x06 Battery_Connector1
+U 1 1 5D97EF45
+P 2950 1650
+F 0 "Battery_Connector1" H 3030 1642 50  0000 L CNN
+F 1 "Conn_01x06" H 3030 1551 50  0000 L CNN
+F 2 "Connector_JST:JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical" H 2950 1650 50  0001 C CNN
+F 3 "~" H 2950 1650 50  0001 C CNN
+	1    2950 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+BATT #PWR0125
+U 1 1 5D9811E4
+P 2750 1550
+F 0 "#PWR0125" H 2750 1400 50  0001 C CNN
+F 1 "+BATT" V 2765 1677 50  0000 L CNN
+F 2 "" H 2750 1550 50  0001 C CNN
+F 3 "" H 2750 1550 50  0001 C CNN
+	1    2750 1550
+	0    -1   -1   0   
+$EndComp
+Text GLabel 2750 1750 0    50   Input ~ 0
+BATT_Cell_1_2
+Text GLabel 2750 1650 0    50   Input ~ 0
+BATT_Cell_2_3
+Text GLabel 1550 5150 2    50   Input ~ 0
+MS2
+$Comp
+L power:+3.3V #PWR0127
+U 1 1 5D99DB8E
+P 1550 4850
+F 0 "#PWR0127" H 1550 4700 50  0001 C CNN
+F 1 "+3.3V" V 1565 4978 50  0000 L CNN
+F 2 "" H 1550 4850 50  0001 C CNN
+F 3 "" H 1550 4850 50  0001 C CNN
+	1    1550 4850
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+3.3V #PWR0128
+U 1 1 5D99E2EB
+P 1550 5250
+F 0 "#PWR0128" H 1550 5100 50  0001 C CNN
+F 1 "+3.3V" V 1565 5378 50  0000 L CNN
+F 2 "" H 1550 5250 50  0001 C CNN
+F 3 "" H 1550 5250 50  0001 C CNN
+	1    1550 5250
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+3.3V #PWR0129
+U 1 1 5D99E87E
+P 1550 5050
+F 0 "#PWR0129" H 1550 4900 50  0001 C CNN
+F 1 "+3.3V" V 1565 5178 50  0000 L CNN
+F 2 "" H 1550 5050 50  0001 C CNN
+F 3 "" H 1550 5050 50  0001 C CNN
+	1    1550 5050
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R_Cell1_Vdiv_A1
+U 1 1 5D9AD220
+P 9350 1650
+F 0 "R_Cell1_Vdiv_A1" H 9420 1696 50  0000 L CNN
+F 1 "33K" H 9420 1605 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 9280 1650 50  0001 C CNN
+F 3 "~" H 9350 1650 50  0001 C CNN
+	1    9350 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R_Cell1_Vdiv_B1
+U 1 1 5D9AD6DB
+P 9350 1950
+F 0 "R_Cell1_Vdiv_B1" H 9420 1996 50  0000 L CNN
+F 1 "100K" H 9420 1905 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 9280 1950 50  0001 C CNN
+F 3 "~" H 9350 1950 50  0001 C CNN
+	1    9350 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0131
+U 1 1 5D9AE74A
+P 9350 2100
+F 0 "#PWR0131" H 9350 1850 50  0001 C CNN
+F 1 "GND" H 9355 1927 50  0000 C CNN
+F 2 "" H 9350 2100 50  0001 C CNN
+F 3 "" H 9350 2100 50  0001 C CNN
+	1    9350 2100
+	1    0    0    -1  
+$EndComp
+Text GLabel 9350 1500 1    50   Input ~ 0
+BATT_Cell_1_2
+$Comp
+L Device:R R_Cell2_Vdiv_A1
+U 1 1 5D9BBA02
+P 10300 2400
+F 0 "R_Cell2_Vdiv_A1" H 10370 2446 50  0000 L CNN
+F 1 "100K" H 10370 2355 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 10230 2400 50  0001 C CNN
+F 3 "~" H 10300 2400 50  0001 C CNN
+	1    10300 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R_Cell2_Vdiv_B1
+U 1 1 5D9BBA0C
+P 10300 2700
+F 0 "R_Cell2_Vdiv_B1" H 10370 2746 50  0000 L CNN
+F 1 "47K" H 10370 2655 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 10230 2700 50  0001 C CNN
+F 3 "~" H 10300 2700 50  0001 C CNN
+	1    10300 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0132
+U 1 1 5D9BBA16
+P 10300 2850
+F 0 "#PWR0132" H 10300 2600 50  0001 C CNN
+F 1 "GND" H 10305 2677 50  0000 C CNN
+F 2 "" H 10300 2850 50  0001 C CNN
+F 3 "" H 10300 2850 50  0001 C CNN
+	1    10300 2850
+	1    0    0    -1  
+$EndComp
+Text GLabel 10300 2250 1    50   Input ~ 0
+BATT_Cell_2_3
+$Comp
+L Device:R R_Cell3_Vdiv_A1
+U 1 1 5D9BF310
+P 9700 3200
+F 0 "R_Cell3_Vdiv_A1" H 9770 3246 50  0000 L CNN
+F 1 "100K" H 9770 3155 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 9630 3200 50  0001 C CNN
+F 3 "~" H 9700 3200 50  0001 C CNN
+	1    9700 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R_Cell3_Vdiv_B1
+U 1 1 5D9BF31A
+P 9700 3500
+F 0 "R_Cell3_Vdiv_B1" H 9770 3546 50  0000 L CNN
+F 1 "33K" H 9770 3455 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 9630 3500 50  0001 C CNN
+F 3 "~" H 9700 3500 50  0001 C CNN
+	1    9700 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0133
+U 1 1 5D9BF324
+P 9700 3650
+F 0 "#PWR0133" H 9700 3400 50  0001 C CNN
+F 1 "GND" H 9705 3477 50  0000 C CNN
+F 2 "" H 9700 3650 50  0001 C CNN
+F 3 "" H 9700 3650 50  0001 C CNN
+	1    9700 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+BATT #PWR0134
+U 1 1 5D9C1B1A
+P 9700 3050
+F 0 "#PWR0134" H 9700 2900 50  0001 C CNN
+F 1 "+BATT" H 9715 3223 50  0000 C CNN
+F 2 "" H 9700 3050 50  0001 C CNN
+F 3 "" H 9700 3050 50  0001 C CNN
+	1    9700 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7850 2200 9000 2200
+Wire Wire Line
+	9000 2200 9000 1800
+Wire Wire Line
+	9000 1800 9350 1800
+Connection ~ 9350 1800
+Wire Wire Line
+	7850 2300 9000 2300
+Wire Wire Line
+	9000 2300 9000 2550
+Wire Wire Line
+	9000 2550 10300 2550
+Connection ~ 10300 2550
+Wire Wire Line
+	7850 2400 8900 2400
+Wire Wire Line
+	8900 2400 8900 3350
+Wire Wire Line
+	8900 3350 9700 3350
+Connection ~ 9700 3350
+$Comp
+L Connector_Generic:Conn_01x05 RPi_Power_Connector1
+U 1 1 5D98DCAA
+P 2950 2400
+F 0 "RPi_Power_Connector1" H 3030 2442 50  0000 L CNN
+F 1 "Conn_01x05" H 3030 2351 50  0000 L CNN
+F 2 "Connector_JST:JST_XH_B5B-XH-A_1x05_P2.50mm_Vertical" H 2950 2400 50  0001 C CNN
+F 3 "~" H 2950 2400 50  0001 C CNN
+	1    2950 2400
+	1    0    0    -1  
+$EndComp
+Text GLabel 2750 2500 0    50   Input ~ 0
+I2C_SDA
+Text GLabel 2750 2600 0    50   Input ~ 0
+I2C_SCL
+$Comp
+L Connector_Generic:Conn_01x04 Con_Motor_L1
+U 1 1 5D9EF24A
+P 4700 3950
+F 0 "Con_Motor_L1" H 4780 3942 50  0000 L CNN
+F 1 "Conn_01x04" H 4780 3851 50  0000 L CNN
+F 2 "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical" H 4700 3950 50  0001 C CNN
+F 3 "~" H 4700 3950 50  0001 C CNN
+	1    4700 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x04 Con_Motor_R1
+U 1 1 5D9F088D
+P 4700 6200
+F 0 "Con_Motor_R1" H 4780 6192 50  0000 L CNN
+F 1 "Conn_01x04" H 4780 6101 50  0000 L CNN
+F 2 "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical" H 4700 6200 50  0001 C CNN
+F 3 "~" H 4700 6200 50  0001 C CNN
+	1    4700 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x03 Con_Stepdown_Board1
+U 1 1 5DA073D0
+P 6450 5550
+F 0 "Con_Stepdown_Board1" H 6530 5592 50  0000 L CNN
+F 1 "Conn_01x03" H 6530 5501 50  0000 L CNN
+F 2 "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical" H 6450 5550 50  0001 C CNN
+F 3 "~" H 6450 5550 50  0001 C CNN
+	1    6450 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+BATT #PWR0105
+U 1 1 5DA08380
+P 6250 5450
+F 0 "#PWR0105" H 6250 5300 50  0001 C CNN
+F 1 "+BATT" V 6265 5577 50  0000 L CNN
+F 2 "" H 6250 5450 50  0001 C CNN
+F 3 "" H 6250 5450 50  0001 C CNN
+	1    6250 5450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+5V #PWR0107
+U 1 1 5DA092AB
+P 6250 5550
+F 0 "#PWR0107" H 6250 5400 50  0001 C CNN
+F 1 "+5V" V 6265 5678 50  0000 L CNN
+F 2 "" H 6250 5550 50  0001 C CNN
+F 3 "" H 6250 5550 50  0001 C CNN
+	1    6250 5550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0108
+U 1 1 5DA09678
+P 6250 5650
+F 0 "#PWR0108" H 6250 5400 50  0001 C CNN
+F 1 "GND" V 6255 5522 50  0000 R CNN
+F 2 "" H 6250 5650 50  0001 C CNN
+F 3 "" H 6250 5650 50  0001 C CNN
+	1    6250 5650
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 5DA10D38
+P 2750 1950
+F 0 "#PWR0106" H 2750 1700 50  0001 C CNN
+F 1 "GND" V 2755 1822 50  0000 R CNN
+F 2 "" H 2750 1950 50  0001 C CNN
+F 3 "" H 2750 1950 50  0001 C CNN
+	1    2750 1950
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0126
+U 1 1 5DA110DE
+P 2750 1850
+F 0 "#PWR0126" H 2750 1600 50  0001 C CNN
+F 1 "GND" V 2755 1722 50  0000 R CNN
+F 2 "" H 2750 1850 50  0001 C CNN
+F 3 "" H 2750 1850 50  0001 C CNN
+	1    2750 1850
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0113
+U 1 1 5DA20DA6
+P 4200 7000
+F 0 "#PWR0113" H 4200 6750 50  0001 C CNN
+F 1 "GND" H 4205 6827 50  0000 C CNN
+F 2 "" H 4200 7000 50  0001 C CNN
+F 3 "" H 4200 7000 50  0001 C CNN
+	1    4200 7000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0114
+U 1 1 5DA21328
+P 4200 4750
+F 0 "#PWR0114" H 4200 4500 50  0001 C CNN
+F 1 "GND" H 4205 4577 50  0000 C CNN
+F 2 "" H 4200 4750 50  0001 C CNN
+F 3 "" H 4200 4750 50  0001 C CNN
+	1    4200 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0123
+U 1 1 5DA22F82
+P 4000 5500
+F 0 "#PWR0123" H 4000 5350 50  0001 C CNN
+F 1 "+3.3V" H 4015 5673 50  0000 C CNN
+F 2 "" H 4000 5500 50  0001 C CNN
+F 3 "" H 4000 5500 50  0001 C CNN
+	1    4000 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0110
+U 1 1 5DA23E7F
+P 2800 4550
+F 0 "#PWR0110" H 2800 4300 50  0001 C CNN
+F 1 "GND" H 2805 4377 50  0000 C CNN
+F 2 "" H 2800 4550 50  0001 C CNN
+F 3 "" H 2800 4550 50  0001 C CNN
+	1    2800 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0112
+U 1 1 5DA24258
+P 2850 6800
+F 0 "#PWR0112" H 2850 6550 50  0001 C CNN
+F 1 "GND" H 2855 6627 50  0000 C CNN
+F 2 "" H 2850 6800 50  0001 C CNN
+F 3 "" H 2850 6800 50  0001 C CNN
+	1    2850 6800
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
