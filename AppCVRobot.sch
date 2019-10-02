@@ -449,12 +449,12 @@ $EndComp
 $Comp
 L power:GND #PWR0106
 U 1 1 5DA10D38
-P 7000 2900
-F 0 "#PWR0106" H 7000 2650 50  0001 C CNN
-F 1 "GND" V 7005 2772 50  0000 R CNN
-F 2 "" H 7000 2900 50  0001 C CNN
-F 3 "" H 7000 2900 50  0001 C CNN
-	1    7000 2900
+P 6300 2900
+F 0 "#PWR0106" H 6300 2650 50  0001 C CNN
+F 1 "GND" V 6305 2772 50  0000 R CNN
+F 2 "" H 6300 2900 50  0001 C CNN
+F 3 "" H 6300 2900 50  0001 C CNN
+	1    6300 2900
 	0    1    1    0   
 $EndComp
 $Comp
@@ -952,7 +952,6 @@ Wire Wire Line
 	7000 1700 7000 1800
 Wire Wire Line
 	7000 1800 7250 1800
-Connection ~ 7000 1800
 $Comp
 L Amplifier_Operational:LM358 CurrentDrawOpAmp1
 U 3 1 5DADB8A7
@@ -1029,8 +1028,6 @@ F 3 "~" H 8600 2550 50  0001 C CNN
 	1    8600 2550
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	7000 1800 7000 2800
 $Comp
 L Device:R R_I_4
 U 1 1 5DB26195
@@ -1230,4 +1227,28 @@ Wire Wire Line
 	3900 3050 4150 3050
 Wire Wire Line
 	4150 3050 4150 2700
+$Comp
+L Connector_Generic:Conn_01x04 Switch_Connector1
+U 1 1 5D9591F2
+P 6600 3100
+F 0 "Switch_Connector1" H 6680 3142 50  0000 L CNN
+F 1 "Conn_01x04" H 6680 3051 50  0000 L CNN
+F 2 "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical" H 6600 3100 50  0001 C CNN
+F 3 "~" H 6600 3100 50  0001 C CNN
+	1    6600 3100
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	7000 1800 7000 2800
+Connection ~ 7000 1800
+Wire Wire Line
+	6700 2900 6800 2900
+Wire Wire Line
+	6300 2900 6500 2900
+Wire Wire Line
+	6800 2900 7000 2900
+Connection ~ 6800 2900
+Wire Wire Line
+	6600 2900 6500 2900
+Connection ~ 6500 2900
 $EndSCHEMATC
