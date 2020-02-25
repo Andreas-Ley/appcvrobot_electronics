@@ -14,9 +14,9 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 Text GLabel 2200 2600 3    40   Input ~ 0
-PCheck
+P_Check
 Text GLabel 1700 1700 0    40   Input ~ 0
-PowerIN
+P_IN
 Wire Wire Line
 	1700 1600 1250 1600
 Wire Wire Line
