@@ -1,0 +1,674 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:+BATT #PWR0133
+U 1 1 5E43F9A9
+P 1250 1900
+F 0 "#PWR0133" H 1250 1750 50  0001 C CNN
+F 1 "+BATT" V 1265 2027 50  0000 L CNN
+F 2 "" H 1250 1900 50  0001 C CNN
+F 3 "" H 1250 1900 50  0001 C CNN
+	1    1250 1900
+	0    1    -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0128
+U 1 1 5E41494B
+P 1250 2100
+F 0 "#PWR0128" H 1250 1850 50  0001 C CNN
+F 1 "GND" V 1255 1972 50  0000 R CNN
+F 2 "" H 1250 2100 50  0001 C CNN
+F 3 "" H 1250 2100 50  0001 C CNN
+	1    1250 2100
+	0    -1   1    0   
+$EndComp
+Text GLabel 2200 2600 3    40   Input ~ 0
+PCheck
+Text GLabel 1700 1700 0    40   Input ~ 0
+PowerIN
+Text GLabel 1250 1200 2    40   Input ~ 0
+PowerIN
+Text GLabel 1250 1100 2    40   Input ~ 0
+PCheck
+Wire Wire Line
+	1700 1600 1250 1600
+Wire Wire Line
+	1250 1500 1700 1500
+Wire Wire Line
+	1700 1400 1250 1400
+Wire Wire Line
+	1250 1300 1700 1300
+$Comp
+L Connector:Conn_01x11_Female Con_MainBoard2PowerBoard1
+U 1 1 5DA6255C
+P 1050 1600
+F 0 "Con_MainBoard2PowerBoard1" H 942 975 50  0000 C CNN
+F 1 "Conn_01x09_Female" H 942 1066 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x11_P2.54mm_Vertical" H 1050 1600 50  0001 C CNN
+F 3 "~" H 1050 1600 50  0001 C CNN
+	1    1050 1600
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0140
+U 1 1 5DA7682E
+P 1250 2000
+F 0 "#PWR0140" H 1250 1750 50  0001 C CNN
+F 1 "GND" V 1255 1872 50  0000 R CNN
+F 2 "" H 1250 2000 50  0001 C CNN
+F 3 "" H 1250 2000 50  0001 C CNN
+	1    1250 2000
+	0    -1   1    0   
+$EndComp
+$Comp
+L power:+5V #PWR0144
+U 1 1 5DA7C32B
+P 1250 1700
+F 0 "#PWR0144" H 1250 1550 50  0001 C CNN
+F 1 "+5V" V 1265 1828 50  0000 L CNN
+F 2 "" H 1250 1700 50  0001 C CNN
+F 3 "" H 1250 1700 50  0001 C CNN
+	1    1250 1700
+	0    1    -1   0   
+$EndComp
+$Comp
+L power:+BATT #PWR0142
+U 1 1 5DA79136
+P 1250 1800
+F 0 "#PWR0142" H 1250 1650 50  0001 C CNN
+F 1 "+BATT" V 1265 1927 50  0000 L CNN
+F 2 "" H 1250 1800 50  0001 C CNN
+F 3 "" H 1250 1800 50  0001 C CNN
+	1    1250 1800
+	0    1    -1   0   
+$EndComp
+$Comp
+L Custom:LevelShifter U1
+U 1 1 5D8DEC02
+P 3400 3150
+F 0 "U1" V 2935 3200 50  0000 C CNN
+F 1 "LevelShifter" V 3026 3200 50  0000 C CNN
+F 2 "CustomFootprints:LevelShifterBreakoutBoard" H 3200 2350 50  0001 C CNN
+F 3 "" H 3400 3050 512 0001 C CNN
+	1    3400 3150
+	0    1    1    0   
+$EndComp
+Text GLabel 1700 1800 0    40   Input ~ 0
+MS3_L
+Text GLabel 1700 1900 0    40   Input ~ 0
+MS2_L
+$Comp
+L Driver_Motor:Pololu_Breakout_A4988 MD_L1
+U 1 1 5D86D179
+P 2200 4400
+F 0 "MD_L1" H 2900 5000 50  0000 C CNN
+F 1 "Pololu_Breakout_A4988" H 3150 5100 50  0000 C CNN
+F 2 "Module:Pololu_Breakout-16_15.2x20.3mm" H 2475 3650 50  0001 L CNN
+F 3 "https://www.pololu.com/product/2980/pictures" H 2300 4100 50  0001 C CNN
+	1    2200 4400
+	1    0    0    -1  
+$EndComp
+Text GLabel 3100 1800 2    40   Input ~ 0
+MS3_R
+Text GLabel 3100 1900 2    40   Input ~ 0
+MS2_R
+Text GLabel 3100 2000 2    40   Input ~ 0
+MS1_R
+Text GLabel 1800 4700 0    50   Input ~ 0
+MS1_L
+Wire Wire Line
+	4150 3050 4150 2700
+Wire Wire Line
+	3900 3050 4150 3050
+Wire Wire Line
+	4050 2950 4050 2700
+Wire Wire Line
+	3900 2950 4050 2950
+$Comp
+L power:+5V #PWR0155
+U 1 1 5D8FC885
+P 3900 3150
+F 0 "#PWR0155" H 3900 3000 50  0001 C CNN
+F 1 "+5V" V 3915 3278 50  0000 L CNN
+F 2 "" H 3900 3150 50  0001 C CNN
+F 3 "" H 3900 3150 50  0001 C CNN
+	1    3900 3150
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0154
+U 1 1 5D8F384B
+P 3900 3250
+F 0 "#PWR0154" H 3900 3000 50  0001 C CNN
+F 1 "GND" V 3905 3122 50  0000 R CNN
+F 2 "" H 3900 3250 50  0001 C CNN
+F 3 "" H 3900 3250 50  0001 C CNN
+	1    3900 3250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0153
+U 1 1 5D8F346A
+P 3000 3250
+F 0 "#PWR0153" H 3000 3000 50  0001 C CNN
+F 1 "GND" V 3005 3122 50  0000 R CNN
+F 2 "" H 3000 3250 50  0001 C CNN
+F 3 "" H 3000 3250 50  0001 C CNN
+	1    3000 3250
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+3.3V #PWR0152
+U 1 1 5D8F2EF3
+P 3000 3150
+F 0 "#PWR0152" H 3000 3000 50  0001 C CNN
+F 1 "+3.3V" V 3015 3278 50  0000 L CNN
+F 2 "" H 3000 3150 50  0001 C CNN
+F 3 "" H 3000 3150 50  0001 C CNN
+	1    3000 3150
+	0    -1   -1   0   
+$EndComp
+Text GLabel 3000 3050 0    50   Input ~ 0
+I2C_SCL
+Text GLabel 3000 2950 0    50   Input ~ 0
+I2C_SDA
+$Comp
+L power:GND #PWR0151
+U 1 1 5D8CA2E5
+P 4250 2700
+F 0 "#PWR0151" H 4250 2450 50  0001 C CNN
+F 1 "GND" V 4255 2572 50  0000 R CNN
+F 2 "" H 4250 2700 50  0001 C CNN
+F 3 "" H 4250 2700 50  0001 C CNN
+	1    4250 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0150
+U 1 1 5D8C9E57
+P 4350 2700
+F 0 "#PWR0150" H 4350 2550 50  0001 C CNN
+F 1 "+5V" V 4365 2828 50  0000 L CNN
+F 2 "" H 4350 2700 50  0001 C CNN
+F 3 "" H 4350 2700 50  0001 C CNN
+	1    4350 2700
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x04 Display_Connector1
+U 1 1 5D8C83D4
+P 4250 2500
+F 0 "Display_Connector1" H 4330 2542 50  0000 L CNN
+F 1 "Conn_01x04" H 4330 2451 50  0000 L CNN
+F 2 "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical" H 4250 2500 50  0001 C CNN
+F 3 "~" H 4250 2500 50  0001 C CNN
+	1    4250 2500
+	0    1    -1   0   
+$EndComp
+Text Notes 3400 700  0    157  ~ 0
+Main Board
+$Comp
+L power:GND #PWR0112
+U 1 1 5DA24258
+P 1050 7250
+F 0 "#PWR0112" H 1050 7000 50  0001 C CNN
+F 1 "GND" H 1055 7077 50  0000 C CNN
+F 2 "" H 1050 7250 50  0001 C CNN
+F 3 "" H 1050 7250 50  0001 C CNN
+	1    1050 7250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0110
+U 1 1 5DA23E7F
+P 1000 5000
+F 0 "#PWR0110" H 1000 4750 50  0001 C CNN
+F 1 "GND" H 1005 4827 50  0000 C CNN
+F 2 "" H 1000 5000 50  0001 C CNN
+F 3 "" H 1000 5000 50  0001 C CNN
+	1    1000 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0123
+U 1 1 5DA22F82
+P 2200 5950
+F 0 "#PWR0123" H 2200 5800 50  0001 C CNN
+F 1 "+3.3V" H 2215 6123 50  0000 C CNN
+F 2 "" H 2200 5950 50  0001 C CNN
+F 3 "" H 2200 5950 50  0001 C CNN
+	1    2200 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0114
+U 1 1 5DA21328
+P 2400 5200
+F 0 "#PWR0114" H 2400 4950 50  0001 C CNN
+F 1 "GND" H 2405 5027 50  0000 C CNN
+F 2 "" H 2400 5200 50  0001 C CNN
+F 3 "" H 2400 5200 50  0001 C CNN
+	1    2400 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0113
+U 1 1 5DA20DA6
+P 2400 7450
+F 0 "#PWR0113" H 2400 7200 50  0001 C CNN
+F 1 "GND" H 2405 7277 50  0000 C CNN
+F 2 "" H 2400 7450 50  0001 C CNN
+F 3 "" H 2400 7450 50  0001 C CNN
+	1    2400 7450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x04 Con_Motor_R1
+U 1 1 5D9F088D
+P 2900 6650
+F 0 "Con_Motor_R1" H 2980 6642 50  0000 L CNN
+F 1 "Conn_01x04" H 2980 6551 50  0000 L CNN
+F 2 "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical" H 2900 6650 50  0001 C CNN
+F 3 "~" H 2900 6650 50  0001 C CNN
+	1    2900 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x04 Con_Motor_L1
+U 1 1 5D9EF24A
+P 2900 4400
+F 0 "Con_Motor_L1" H 2980 4392 50  0000 L CNN
+F 1 "Conn_01x04" H 2980 4301 50  0000 L CNN
+F 2 "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical" H 2900 4400 50  0001 C CNN
+F 3 "~" H 2900 4400 50  0001 C CNN
+	1    2900 4400
+	1    0    0    -1  
+$EndComp
+Text GLabel 1300 3050 0    50   Input ~ 0
+I2C_SCL
+Text GLabel 1300 2950 0    50   Input ~ 0
+I2C_SDA
+$Comp
+L Connector_Generic:Conn_01x08 RPi_Connector1
+U 1 1 5D98DCAA
+P 1500 3250
+F 0 "RPi_Connector1" H 1580 3292 50  0000 L CNN
+F 1 "Conn_01x05" H 1580 3201 50  0000 L CNN
+F 2 "Connector_JST:JST_XH_B8B-XH-A_1x08_P2.50mm_Vertical" H 1500 3250 50  0001 C CNN
+F 3 "~" H 1500 3250 50  0001 C CNN
+	1    1500 3250
+	1    0    0    -1  
+$EndComp
+Text GLabel 3100 2300 2    50   Input ~ 0
+Enable_Steppers
+$Comp
+L power:+3.3V #PWR0124
+U 1 1 5D96A320
+P 1700 1200
+F 0 "#PWR0124" H 1700 1050 50  0001 C CNN
+F 1 "+3.3V" V 1715 1328 50  0000 L CNN
+F 2 "" H 1700 1200 50  0001 C CNN
+F 3 "" H 1700 1200 50  0001 C CNN
+	1    1700 1200
+	0    -1   1    0   
+$EndComp
+$Comp
+L power:GND #PWR0122
+U 1 1 5D968DD5
+P 1700 1000
+F 0 "#PWR0122" H 1700 750 50  0001 C CNN
+F 1 "GND" V 1705 872 50  0000 R CNN
+F 2 "" H 1700 1000 50  0001 C CNN
+F 3 "" H 1700 1000 50  0001 C CNN
+	1    1700 1000
+	0    1    -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0121
+U 1 1 5D968847
+P 3100 1600
+F 0 "#PWR0121" H 3100 1350 50  0001 C CNN
+F 1 "GND" V 3105 1472 50  0000 R CNN
+F 2 "" H 3100 1600 50  0001 C CNN
+F 3 "" H 3100 1600 50  0001 C CNN
+	1    3100 1600
+	0    -1   1    0   
+$EndComp
+$Comp
+L power:GND #PWR0120
+U 1 1 5D968341
+P 2400 2600
+F 0 "#PWR0120" H 2400 2350 50  0001 C CNN
+F 1 "GND" H 2405 2427 50  0000 C CNN
+F 2 "" H 2400 2600 50  0001 C CNN
+F 3 "" H 2400 2600 50  0001 C CNN
+	1    2400 2600
+	-1   0    0    -1  
+$EndComp
+Text GLabel 1900 2600 3    50   Input ~ 0
+I2C_SCL
+Text GLabel 2000 2600 3    50   Input ~ 0
+I2C_SDA
+$Comp
+L power:+3.3V #PWR0118
+U 1 1 5D93BF08
+P 2200 3700
+F 0 "#PWR0118" H 2200 3550 50  0001 C CNN
+F 1 "+3.3V" H 2215 3873 50  0000 C CNN
+F 2 "" H 2200 3700 50  0001 C CNN
+F 3 "" H 2200 3700 50  0001 C CNN
+	1    2200 3700
+	1    0    0    -1  
+$EndComp
+Text GLabel 3100 1300 2    50   Input ~ 0
+Dir_R
+Text GLabel 3100 1400 2    50   Input ~ 0
+Step_R
+Text GLabel 3100 2100 2    50   Input ~ 0
+Dir_L
+Text GLabel 3100 2200 2    50   Input ~ 0
+Step_L
+Text GLabel 1800 6550 0    50   Input ~ 0
+Enable_Steppers
+Text GLabel 1800 4300 0    50   Input ~ 0
+Enable_Steppers
+Text GLabel 1800 6650 0    50   Input ~ 0
+Step_R
+Text GLabel 1800 4400 0    50   Input ~ 0
+Step_L
+Text GLabel 1800 6750 0    50   Input ~ 0
+Dir_R
+Text GLabel 1800 4500 0    50   Input ~ 0
+Dir_L
+Wire Wire Line
+	1800 4000 1800 4100
+Wire Wire Line
+	1800 6250 1800 6350
+$Comp
+L power:GND #PWR0119
+U 1 1 5D8A3A28
+P 2200 7450
+F 0 "#PWR0119" H 2200 7200 50  0001 C CNN
+F 1 "GND" H 2205 7277 50  0000 C CNN
+F 2 "" H 2200 7450 50  0001 C CNN
+F 3 "" H 2200 7450 50  0001 C CNN
+	1    2200 7450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0117
+U 1 1 5D8A1B7E
+P 2200 5200
+F 0 "#PWR0117" H 2200 4950 50  0001 C CNN
+F 1 "GND" H 2205 5027 50  0000 C CNN
+F 2 "" H 2200 5200 50  0001 C CNN
+F 3 "" H 2200 5200 50  0001 C CNN
+	1    2200 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+BATT #PWR0116
+U 1 1 5D8A16C7
+P 2400 5950
+F 0 "#PWR0116" H 2400 5800 50  0001 C CNN
+F 1 "+BATT" H 2415 6123 50  0000 C CNN
+F 2 "" H 2400 5950 50  0001 C CNN
+F 3 "" H 2400 5950 50  0001 C CNN
+	1    2400 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+BATT #PWR0115
+U 1 1 5D8A104B
+P 2400 3700
+F 0 "#PWR0115" H 2400 3550 50  0001 C CNN
+F 1 "+BATT" H 2415 3873 50  0000 C CNN
+F 2 "" H 2400 3700 50  0001 C CNN
+F 3 "" H 2400 3700 50  0001 C CNN
+	1    2400 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+BATT #PWR0111
+U 1 1 5D899AE0
+P 1050 6950
+F 0 "#PWR0111" H 1050 6800 50  0001 C CNN
+F 1 "+BATT" H 1065 7123 50  0000 C CNN
+F 2 "" H 1050 6950 50  0001 C CNN
+F 3 "" H 1050 6950 50  0001 C CNN
+	1    1050 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+BATT #PWR0109
+U 1 1 5D898B5F
+P 1000 4700
+F 0 "#PWR0109" H 1000 4550 50  0001 C CNN
+F 1 "+BATT" H 1015 4873 50  0000 C CNN
+F 2 "" H 1000 4700 50  0001 C CNN
+F 3 "" H 1000 4700 50  0001 C CNN
+	1    1000 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5D882AE2
+P 1300 3150
+F 0 "#PWR0104" H 1300 2900 50  0001 C CNN
+F 1 "GND" V 1305 3022 50  0000 R CNN
+F 2 "" H 1300 3150 50  0001 C CNN
+F 3 "" H 1300 3150 50  0001 C CNN
+	1    1300 3150
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+3.3V #PWR0102
+U 1 1 5D8820D7
+P 1300 3250
+F 0 "#PWR0102" H 1300 3100 50  0001 C CNN
+F 1 "+3.3V" V 1315 3378 50  0000 L CNN
+F 2 "" H 1300 3250 50  0001 C CNN
+F 3 "" H 1300 3250 50  0001 C CNN
+	1    1300 3250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+5V #PWR0101
+U 1 1 5D881952
+P 1300 3350
+F 0 "#PWR0101" H 1300 3200 50  0001 C CNN
+F 1 "+5V" V 1315 3478 50  0000 L CNN
+F 2 "" H 1300 3350 50  0001 C CNN
+F 3 "" H 1300 3350 50  0001 C CNN
+	1    1300 3350
+	0    -1   -1   0   
+$EndComp
+Text GLabel 1800 7150 0    50   Input ~ 0
+MS3_R
+Text GLabel 1800 4900 0    50   Input ~ 0
+MS3_L
+Text GLabel 1800 7050 0    50   Input ~ 0
+MS2_R
+Text GLabel 1800 4800 0    50   Input ~ 0
+MS2_L
+Text GLabel 1800 6950 0    50   Input ~ 0
+MS1_R
+$Comp
+L Device:CP C_MD_L2
+U 1 1 5D878D95
+P 1050 7100
+F 0 "C_MD_L2" H 1168 7146 50  0000 L CNN
+F 1 "100uF" H 1168 7055 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 1088 6950 50  0001 C CNN
+F 3 "~" H 1050 7100 50  0001 C CNN
+	1    1050 7100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C_MD_L1
+U 1 1 5D8782D3
+P 1000 4850
+F 0 "C_MD_L1" H 1118 4896 50  0000 L CNN
+F 1 "100uF" H 1118 4805 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 1038 4700 50  0001 C CNN
+F 3 "~" H 1000 4850 50  0001 C CNN
+	1    1000 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Driver_Motor:Pololu_Breakout_A4988 MD_R1
+U 1 1 5D876F4D
+P 2200 6650
+F 0 "MD_R1" H 2900 7050 50  0000 C CNN
+F 1 "Pololu_Breakout_A4988" H 3100 7150 50  0000 C CNN
+F 2 "Module:Pololu_Breakout-16_15.2x20.3mm" H 2475 5900 50  0001 L CNN
+F 3 "https://www.pololu.com/product/2980/pictures" H 2300 6350 50  0001 C CNN
+	1    2200 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x09 AdOn_Connector1
+U 1 1 5E40576C
+P 4050 4100
+F 0 "AdOn_Connector1" H 4130 4142 50  0000 L CNN
+F 1 "Conn_01x05" H 4130 4051 50  0000 L CNN
+F 2 "Connector_JST:JST_XH_B9B-XH-A_1x09_P2.50mm_Vertical" H 4050 4100 50  0001 C CNN
+F 3 "~" H 4050 4100 50  0001 C CNN
+	1    4050 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 5E405772
+P 3850 4100
+F 0 "#PWR0103" H 3850 3850 50  0001 C CNN
+F 1 "GND" V 3855 3972 50  0000 R CNN
+F 2 "" H 3850 4100 50  0001 C CNN
+F 3 "" H 3850 4100 50  0001 C CNN
+	1    3850 4100
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+3.3V #PWR0105
+U 1 1 5E405778
+P 3850 4500
+F 0 "#PWR0105" H 3850 4350 50  0001 C CNN
+F 1 "+3.3V" V 3865 4628 50  0000 L CNN
+F 2 "" H 3850 4500 50  0001 C CNN
+F 3 "" H 3850 4500 50  0001 C CNN
+	1    3850 4500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+5V #PWR0106
+U 1 1 5E40577E
+P 3850 4400
+F 0 "#PWR0106" H 3850 4250 50  0001 C CNN
+F 1 "+5V" V 3865 4528 50  0000 L CNN
+F 2 "" H 3850 4400 50  0001 C CNN
+F 3 "" H 3850 4400 50  0001 C CNN
+	1    3850 4400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0107
+U 1 1 5E406480
+P 3850 4000
+F 0 "#PWR0107" H 3850 3750 50  0001 C CNN
+F 1 "GND" V 3855 3872 50  0000 R CNN
+F 2 "" H 3850 4000 50  0001 C CNN
+F 3 "" H 3850 4000 50  0001 C CNN
+	1    3850 4000
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+BATT #PWR0108
+U 1 1 5E404995
+P 3850 4200
+F 0 "#PWR0108" H 3850 4050 50  0001 C CNN
+F 1 "+BATT" V 3865 4327 50  0000 L CNN
+F 2 "" H 3850 4200 50  0001 C CNN
+F 3 "" H 3850 4200 50  0001 C CNN
+	1    3850 4200
+	0    -1   1    0   
+$EndComp
+$Comp
+L power:+BATT #PWR0125
+U 1 1 5E40498F
+P 3850 4300
+F 0 "#PWR0125" H 3850 4150 50  0001 C CNN
+F 1 "+BATT" V 3865 4427 50  0000 L CNN
+F 2 "" H 3850 4300 50  0001 C CNN
+F 3 "" H 3850 4300 50  0001 C CNN
+	1    3850 4300
+	0    -1   1    0   
+$EndComp
+Text GLabel 1300 3450 0    50   Input ~ 0
+RPI1
+Text GLabel 1300 3550 0    50   Input ~ 0
+RPI2
+Text GLabel 1300 3650 0    50   Input ~ 0
+RPI3
+Text GLabel 3850 3700 0    50   Input ~ 0
+RPI3
+Text GLabel 3850 3800 0    50   Input ~ 0
+RPI2
+Text GLabel 3850 3900 0    50   Input ~ 0
+RPI1
+$Comp
+L Connector_Generic:Conn_01x03 Con_Switch1
+U 1 1 5E518E51
+P 4050 1750
+F 0 "Con_Switch1" H 4130 1742 50  0000 L CNN
+F 1 "Conn_01x04" H 4130 1651 50  0000 L CNN
+F 2 "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical" H 4050 1750 50  0001 C CNN
+F 3 "~" H 4050 1750 50  0001 C CNN
+	1    4050 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0126
+U 1 1 5E51A9A6
+P 3850 1850
+F 0 "#PWR0126" H 3850 1700 50  0001 C CNN
+F 1 "+3.3V" V 3865 1978 50  0000 L CNN
+F 2 "" H 3850 1850 50  0001 C CNN
+F 3 "" H 3850 1850 50  0001 C CNN
+	1    3850 1850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Custom:IZOKEEProMini MicroController1
+U 1 1 5D9626D5
+P 2300 1700
+F 0 "MicroController1" H 2200 2765 50  0000 C CNN
+F 1 "IZOKEEProMini" H 2200 2674 50  0000 C CNN
+F 2 "CustomFootprints:Arduino_Pro_Mini_Socket_IZOKEE" H 2200 800 50  0001 C CNN
+F 3 "" H 2200 800 50  0001 C CNN
+	1    2300 1700
+	-1   0    0    -1  
+$EndComp
+Text GLabel 1700 2000 0    40   Input ~ 0
+MS1_L
+Text GLabel 3100 1700 2    40   Input ~ 0
+Sw1
+Text GLabel 3100 2400 2    40   Input ~ 0
+Sw2
+Text GLabel 3850 1750 0    40   Input ~ 0
+Sw1
+Text GLabel 3850 1650 0    40   Input ~ 0
+Sw2
+$EndSCHEMATC
