@@ -14,9 +14,9 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 Text GLabel 2200 2600 3    40   Input ~ 0
-PCheck
+P_Check
 Text GLabel 1700 1700 0    40   Input ~ 0
-PowerIN
+P_IN
 Wire Wire Line
 	1700 1600 1250 1600
 Wire Wire Line
@@ -570,17 +570,6 @@ F 3 "~" H 4050 1750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3.3V #PWR0126
-U 1 1 5E51A9A6
-P 3850 1850
-F 0 "#PWR0126" H 3850 1700 50  0001 C CNN
-F 1 "+3.3V" V 3865 1978 50  0000 L CNN
-F 2 "" H 3850 1850 50  0001 C CNN
-F 3 "" H 3850 1850 50  0001 C CNN
-	1    3850 1850
-	0    -1   -1   0   
-$EndComp
-$Comp
 L Custom:IZOKEEProMini MicroController1
 U 1 1 5D9626D5
 P 2300 1700
@@ -616,41 +605,6 @@ Text GLabel 7250 1400 0    50   Input ~ 0
 BATT_Cell_1_2
 Text GLabel 7250 1300 0    50   Input ~ 0
 BATT_Cell_2_3
-$Comp
-L Device:R R_Cell1_Vdiv_A1
-U 1 1 5D9AD220
-P 9350 6100
-F 0 "R_Cell1_Vdiv_A1" H 9420 6146 50  0000 L CNN
-F 1 "33K" H 9420 6055 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 9280 6100 50  0001 C CNN
-F 3 "~" H 9350 6100 50  0001 C CNN
-	1    9350 6100
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:R R_Cell1_Vdiv_B1
-U 1 1 5D9AD6DB
-P 9650 6100
-F 0 "R_Cell1_Vdiv_B1" H 9720 6146 50  0000 L CNN
-F 1 "100K" H 9720 6055 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 9580 6100 50  0001 C CNN
-F 3 "~" H 9650 6100 50  0001 C CNN
-	1    9650 6100
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR0131
-U 1 1 5D9AE74A
-P 9800 6100
-F 0 "#PWR0131" H 9800 5850 50  0001 C CNN
-F 1 "GND" H 9805 5927 50  0000 C CNN
-F 2 "" H 9800 6100 50  0001 C CNN
-F 3 "" H 9800 6100 50  0001 C CNN
-	1    9800 6100
-	0    -1   -1   0   
-$EndComp
-Text GLabel 9200 6100 0    50   Input ~ 0
-BATT_Cell_1_2
 $Comp
 L Connector_Generic:Conn_01x03 Con_Stepdown_Board1
 U 1 1 5DA073D0
@@ -696,71 +650,6 @@ F 3 "" H 7500 2900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Amplifier_Operational:LM358 CellVoltageOpAmp1
-U 2 1 5D918BCF
-P 7700 5900
-F 0 "CellVoltageOpAmp1" H 8050 6100 50  0000 C CNN
-F 1 "LM358" H 7700 6176 50  0000 C CNN
-F 2 "" H 7700 5900 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 7700 5900 50  0001 C CNN
-	2    7700 5900
-	1    0    0    -1  
-$EndComp
-$Comp
-L Amplifier_Operational:LM358 CellVoltageOpAmp1
-U 3 1 5D91A686
-P 5900 5000
-F 0 "CellVoltageOpAmp1" H 5858 5046 50  0000 L CNN
-F 1 "LM358" H 5858 4955 50  0000 L CNN
-F 2 "" H 5900 5000 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 5900 5000 50  0001 C CNN
-	3    5900 5000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5500 4850 5500 4700
-Wire Wire Line
-	5500 4700 5800 4700
-Wire Wire Line
-	5500 5150 5500 5300
-Wire Wire Line
-	5500 5300 5800 5300
-$Comp
-L Device:CP C1
-U 1 1 5D9439AD
-P 5500 5000
-F 0 "C1" H 5618 5046 50  0000 L CNN
-F 1 "1uF" H 5618 4955 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 5538 4850 50  0001 C CNN
-F 3 "~" H 5500 5000 50  0001 C CNN
-	1    5500 5000
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0143
-U 1 1 5D947881
-P 5800 5300
-F 0 "#PWR0143" H 5800 5050 50  0001 C CNN
-F 1 "GND" V 5805 5172 50  0000 R CNN
-F 2 "" H 5800 5300 50  0001 C CNN
-F 3 "" H 5800 5300 50  0001 C CNN
-	1    5800 5300
-	1    0    0    -1  
-$EndComp
-Connection ~ 5800 5300
-$Comp
-L power:+5V #PWR0130
-U 1 1 5D9480EF
-P 5800 4700
-F 0 "#PWR0130" H 5800 4550 50  0001 C CNN
-F 1 "+5V" V 5815 4828 50  0000 L CNN
-F 2 "" H 5800 4700 50  0001 C CNN
-F 3 "" H 5800 4700 50  0001 C CNN
-	1    5800 4700
-	1    0    0    -1  
-$EndComp
-Connection ~ 5800 4700
-$Comp
 L Amplifier_Operational:LM358 CurrentDrawOpAmp1
 U 1 1 5D9626EE
 P 9050 2950
@@ -771,188 +660,8 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 9050 2950 50  0001 C CNN
 	1    9050 2950
 	1    0    0    1   
 $EndComp
-$Comp
-L Device:R R_V_Cell2_1
-U 1 1 5D983A9B
-P 7050 4400
-F 0 "R_V_Cell2_1" H 7120 4446 50  0000 L CNN
-F 1 "47K" H 7120 4355 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 6980 4400 50  0001 C CNN
-F 3 "~" H 7050 4400 50  0001 C CNN
-	1    7050 4400
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	7300 4500 7300 4400
-Wire Wire Line
-	7300 4400 7200 4400
-Wire Wire Line
-	7400 4400 7300 4400
-Connection ~ 7300 4400
-Wire Wire Line
-	7300 4800 8000 4800
-Wire Wire Line
-	8000 4800 8000 4300
-$Comp
-L Device:R R_V_Cell2_4
-U 1 1 5D9A5EB9
-P 7300 3900
-F 0 "R_V_Cell2_4" H 7370 3946 50  0000 L CNN
-F 1 "33K" H 7370 3855 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 7230 3900 50  0001 C CNN
-F 3 "~" H 7300 3900 50  0001 C CNN
-	1    7300 3900
-	1    0    0    -1  
-$EndComp
-Text GLabel 6900 4400 0    50   Input ~ 0
-BATT_Cell_1_2
-Text GLabel 6900 4200 0    50   Input ~ 0
-BATT_Cell_2_3
-$Comp
-L power:GND #PWR0137
-U 1 1 5D9E1990
-P 7300 3750
-F 0 "#PWR0137" H 7300 3500 50  0001 C CNN
-F 1 "GND" V 7305 3622 50  0000 R CNN
-F 2 "" H 7300 3750 50  0001 C CNN
-F 3 "" H 7300 3750 50  0001 C CNN
-	1    7300 3750
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R R_V_Cell2_2
-U 1 1 5D9A4DD3
-P 7050 4200
-F 0 "R_V_Cell2_2" H 7120 4246 50  0000 L CNN
-F 1 "47K" H 7120 4155 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 6980 4200 50  0001 C CNN
-F 3 "~" H 7050 4200 50  0001 C CNN
-	1    7050 4200
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:R R_V_Cell3_1
-U 1 1 5D9FAE4A
-P 7050 6000
-F 0 "R_V_Cell3_1" H 7120 6046 50  0000 L CNN
-F 1 "47K" H 7120 5955 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P5.08mm_Vertical" V 6980 6000 50  0001 C CNN
-F 3 "~" H 7050 6000 50  0001 C CNN
-	1    7050 6000
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R_V_Cell3_3
-U 1 1 5D9FAE54
-P 7300 6250
-F 0 "R_V_Cell3_3" H 7370 6296 50  0000 L CNN
-F 1 "33K" H 7370 6205 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 7230 6250 50  0001 C CNN
-F 3 "~" H 7300 6250 50  0001 C CNN
-	1    7300 6250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7300 6100 7300 6000
-Wire Wire Line
-	7300 6000 7200 6000
-Wire Wire Line
-	7400 6000 7300 6000
-Connection ~ 7300 6000
-Wire Wire Line
-	7300 6400 8000 6400
-$Comp
-L Device:R R_V_Cell3_4
-U 1 1 5D9FAE63
-P 7300 5450
-F 0 "R_V_Cell3_4" H 7370 5496 50  0000 L CNN
-F 1 "33K" H 7370 5405 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 7230 5450 50  0001 C CNN
-F 3 "~" H 7300 5450 50  0001 C CNN
-	1    7300 5450
-	1    0    0    -1  
-$EndComp
-Text GLabel 6900 6000 0    50   Input ~ 0
-BATT_Cell_2_3
-$Comp
-L power:GND #PWR0138
-U 1 1 5D9FAE73
-P 7300 5300
-F 0 "#PWR0138" H 7300 5050 50  0001 C CNN
-F 1 "GND" V 7305 5172 50  0000 R CNN
-F 2 "" H 7300 5300 50  0001 C CNN
-F 3 "" H 7300 5300 50  0001 C CNN
-	1    7300 5300
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R R_V_Cell3_2
-U 1 1 5D9FAE7D
-P 7050 5800
-F 0 "R_V_Cell3_2" H 7120 5846 50  0000 L CNN
-F 1 "47K" H 7120 5755 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 6980 5800 50  0001 C CNN
-F 3 "~" H 7050 5800 50  0001 C CNN
-	1    7050 5800
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	7200 4200 7300 4200
-$Comp
-L Amplifier_Operational:LM358 CellVoltageOpAmp1
-U 1 1 5D917965
-P 7700 4300
-F 0 "CellVoltageOpAmp1" H 8050 4450 50  0000 C CNN
-F 1 "LM358" H 7700 4576 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 7700 4300 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 7700 4300 50  0001 C CNN
-	1    7700 4300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7300 4200 7300 4050
-Connection ~ 7300 4200
-Wire Wire Line
-	7300 4200 7400 4200
-Wire Wire Line
-	7200 5800 7300 5800
-Wire Wire Line
-	7300 5600 7300 5800
-Connection ~ 7300 5800
-Wire Wire Line
-	7300 5800 7400 5800
-$Comp
-L power:+BATT #PWR0139
-U 1 1 5DA4010C
-P 6900 5800
-F 0 "#PWR0139" H 6900 5650 50  0001 C CNN
-F 1 "+BATT" V 6915 5927 50  0000 L CNN
-F 2 "" H 6900 5800 50  0001 C CNN
-F 3 "" H 6900 5800 50  0001 C CNN
-	1    6900 5800
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	8000 6400 8000 5900
-Wire Wire Line
-	9500 6100 9500 4150
 Wire Wire Line
 	9500 4150 10300 4150
-Connection ~ 9500 6100
-Wire Wire Line
-	8000 5900 9200 5900
-Wire Wire Line
-	9200 5900 9200 4050
-Wire Wire Line
-	9200 4050 10300 4050
-Connection ~ 8000 5900
-Wire Wire Line
-	8000 4300 9100 4300
-Wire Wire Line
-	9100 4300 9100 3950
-Wire Wire Line
-	9100 3950 10300 3950
-Connection ~ 8000 4300
 $Comp
 L power:GND #PWR0145
 U 1 1 5DA8D223
@@ -1142,35 +851,11 @@ F 3 "" H 8600 3500 50  0001 C CNN
 	1    8600 3500
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:R R_V_Cell2_3
-U 1 1 5D98C622
-P 7300 4650
-F 0 "R_V_Cell2_3" H 7370 4696 50  0000 L CNN
-F 1 "33K" H 7370 4605 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 7230 4650 50  0001 C CNN
-F 3 "~" H 7300 4650 50  0001 C CNN
-	1    7300 4650
-	1    0    0    -1  
-$EndComp
 Text Notes 9200 900  0    157  ~ 0
 Power Board
 Wire Wire Line
 	7000 1800 7000 2800
 Connection ~ 7000 1800
-$Comp
-L power:GND #PWR0159
-U 1 1 5E3FBA77
-P 7150 1100
-F 0 "#PWR0159" H 7150 850 50  0001 C CNN
-F 1 "GND" V 7155 972 50  0000 R CNN
-F 2 "" H 7150 1100 50  0001 C CNN
-F 3 "" H 7150 1100 50  0001 C CNN
-	1    7150 1100
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	7150 1100 7250 1100
 Text GLabel 5400 700  1    50   Input ~ 0
 P_IN
 Wire Wire Line
@@ -1204,10 +889,10 @@ F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 5900 1000 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:D Diode1
+L Device:D Diode1sw1
 U 1 1 5E3B6AE9
 P 5400 850
-F 0 "Diode1" V 5446 771 50  0000 R CNN
+F 0 "Diode1sw1" V 5446 771 50  0000 R CNN
 F 1 "D" V 5355 771 50  0000 R CNN
 F 2 "Diode_THT:D_T-1_P5.08mm_Horizontal" H 5400 850 50  0001 C CNN
 F 3 "~" H 5400 850 50  0001 C CNN
@@ -1273,8 +958,6 @@ Wire Wire Line
 	5550 1300 6000 1300
 Connection ~ 7250 1100
 Wire Wire Line
-	7250 1100 7350 1100
-Wire Wire Line
 	7000 2900 5050 2900
 Wire Wire Line
 	5050 2900 5050 1500
@@ -1298,4 +981,149 @@ Text GLabel 1250 1500 0    40   Input ~ 0
 op2
 Text GLabel 1250 1600 0    40   Input ~ 0
 op1
+Wire Wire Line
+	7250 1100 7350 1100
+Wire Wire Line
+	7150 1100 7250 1100
+$Comp
+L power:GND #PWR0159
+U 1 1 5E3FBA77
+P 7150 1100
+F 0 "#PWR0159" H 7150 850 50  0001 C CNN
+F 1 "GND" V 7155 972 50  0000 R CNN
+F 2 "" H 7150 1100 50  0001 C CNN
+F 3 "" H 7150 1100 50  0001 C CNN
+	1    7150 1100
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+BATT #PWR0139
+U 1 1 5DA4010C
+P 8300 4800
+F 0 "#PWR0139" H 8300 4650 50  0001 C CNN
+F 1 "+BATT" V 8315 4927 50  0000 L CNN
+F 2 "" H 8300 4800 50  0001 C CNN
+F 3 "" H 8300 4800 50  0001 C CNN
+	1    8300 4800
+	-1   0    0    1   
+$EndComp
+Text GLabel 7300 4600 3    50   Input ~ 0
+BATT_Cell_2_3
+Text GLabel 9050 5200 3    50   Input ~ 0
+BATT_Cell_1_2
+$Comp
+L Device:R_POT_TRIM RV3
+U 1 1 5E57EF6D
+P 8300 4650
+F 0 "RV3" H 8230 4604 50  0000 R CNN
+F 1 "R_POT2" H 8230 4695 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical" H 8300 4650 50  0001 C CNN
+F 3 "~" H 8300 4650 50  0001 C CNN
+	1    8300 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT_TRIM RV2
+U 1 1 5E59E0E2
+P 7300 4150
+F 0 "RV2" H 7230 4104 50  0000 R CNN
+F 1 "R_POT3Bat" H 7230 4195 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical" H 7300 4150 50  0001 C CNN
+F 3 "~" H 7300 4150 50  0001 C CNN
+	1    7300 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT_TRIM RV4
+U 1 1 5E59F13C
+P 9050 4750
+F 0 "RV4" H 8980 4704 50  0000 R CNN
+F 1 "R_POT1" H 8980 4795 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical" H 9050 4750 50  0001 C CNN
+F 3 "~" H 9050 4750 50  0001 C CNN
+	1    9050 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0127
+U 1 1 5E5B9E5B
+P 8300 4500
+F 0 "#PWR0127" H 8300 4250 50  0001 C CNN
+F 1 "GND" V 8305 4372 50  0000 R CNN
+F 2 "" H 8300 4500 50  0001 C CNN
+F 3 "" H 8300 4500 50  0001 C CNN
+	1    8300 4500
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0128
+U 1 1 5E5BAC0A
+P 9050 4600
+F 0 "#PWR0128" H 9050 4350 50  0001 C CNN
+F 1 "GND" V 9055 4472 50  0000 R CNN
+F 2 "" H 9050 4600 50  0001 C CNN
+F 3 "" H 9050 4600 50  0001 C CNN
+	1    9050 4600
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0129
+U 1 1 5E5BBA68
+P 7300 4000
+F 0 "#PWR0129" H 7300 3750 50  0001 C CNN
+F 1 "GND" V 7305 3872 50  0000 R CNN
+F 2 "" H 7300 4000 50  0001 C CNN
+F 3 "" H 7300 4000 50  0001 C CNN
+	1    7300 4000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9500 4150 9500 4750
+Wire Wire Line
+	9500 4750 9200 4750
+Wire Wire Line
+	8500 4050 8500 4650
+Wire Wire Line
+	8500 4650 8450 4650
+Wire Wire Line
+	8500 4050 10300 4050
+Wire Wire Line
+	7450 4150 7750 4150
+Wire Wire Line
+	7750 4150 7750 3950
+Wire Wire Line
+	7750 3950 10300 3950
+$Comp
+L Device:D Diode2
+U 1 1 5E5C4560
+P 7300 4450
+F 0 "Diode2" V 7346 4371 50  0000 R CNN
+F 1 "D" V 7255 4371 50  0000 R CNN
+F 2 "Diode_THT:D_T-1_P5.08mm_Horizontal" H 7300 4450 50  0001 C CNN
+F 3 "~" H 7300 4450 50  0001 C CNN
+	1    7300 4450
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D Diode3
+U 1 1 5E5C65FC
+P 9050 5050
+F 0 "Diode3" V 9096 4971 50  0000 R CNN
+F 1 "D" V 9005 4971 50  0000 R CNN
+F 2 "Diode_THT:D_T-1_P5.08mm_Horizontal" H 9050 5050 50  0001 C CNN
+F 3 "~" H 9050 5050 50  0001 C CNN
+	1    9050 5050
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E5F3BCE
+P 3850 1850
+F 0 "#PWR?" H 3850 1600 50  0001 C CNN
+F 1 "GND" V 3855 1722 50  0000 R CNN
+F 2 "" H 3850 1850 50  0001 C CNN
+F 3 "" H 3850 1850 50  0001 C CNN
+	1    3850 1850
+	0    1    -1   0   
+$EndComp
 $EndSCHEMATC
