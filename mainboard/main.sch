@@ -51,7 +51,7 @@ F 3 "https://www.pololu.com/product/2980/pictures" H 2300 4100 50  0001 C CNN
 	1    2200 4400
 	1    0    0    -1  
 $EndComp
-Text GLabel 3100 1800 2    40   Input ~ 0
+Text GLabel 3100 1400 2    40   Input ~ 0
 MS3_R
 Text GLabel 3100 1900 2    40   Input ~ 0
 MS2_R
@@ -305,11 +305,11 @@ F 3 "" H 2200 3700 50  0001 C CNN
 $EndComp
 Text GLabel 3100 1300 2    50   Input ~ 0
 Dir_R
-Text GLabel 3100 1400 2    50   Input ~ 0
+Text GLabel 3100 1800 2    50   Input ~ 0
 Step_R
 Text GLabel 3100 2100 2    50   Input ~ 0
 Dir_L
-Text GLabel 3100 2200 2    50   Input ~ 0
+Text GLabel 3100 2400 2    50   Input ~ 0
 Step_L
 Text GLabel 1800 6550 0    50   Input ~ 0
 Enable_Steppers
@@ -584,7 +584,7 @@ Text GLabel 1700 2000 0    40   Input ~ 0
 MS1_L
 Text GLabel 3100 1700 2    40   Input ~ 0
 Sw1
-Text GLabel 3100 2400 2    40   Input ~ 0
+Text GLabel 3100 2200 2    40   Input ~ 0
 Sw2
 Text GLabel 3850 1750 0    40   Input ~ 0
 Sw1
