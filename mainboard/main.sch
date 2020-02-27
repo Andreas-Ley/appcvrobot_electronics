@@ -575,7 +575,7 @@ U 1 1 5D9626D5
 P 2300 1700
 F 0 "MicroController1" H 2200 2765 50  0000 C CNN
 F 1 "IZOKEEProMini" H 2200 2674 50  0000 C CNN
-F 2 "CustomFootprints:Arduino_Pro_Mini_Socket_IZOKEE" H 2200 800 50  0001 C CNN
+F 2 "CustomFootprints:Arduino_Pro_Mini_Socket_IZOKEE_no_programming" H 2200 800 50  0001 C CNN
 F 3 "" H 2200 800 50  0001 C CNN
 	1    2300 1700
 	-1   0    0    -1  
@@ -874,20 +874,8 @@ F 3 "~" H 5100 1150 50  0001 C CNN
 	1    5100 1150
 	-1   0    0    1   
 $EndComp
-Connection ~ 5400 1000
 Wire Wire Line
 	5100 1000 5400 1000
-$Comp
-L Transistor_BJT:TIP120 Q1
-U 1 1 5E39FC69
-P 5900 1000
-F 0 "Q1" H 6107 1046 50  0000 L CNN
-F 1 "TIP120" H 6107 955 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 6100 925 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 5900 1000 50  0001 L CNN
-	1    5900 1000
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:D Diode1sw1
 U 1 1 5E3B6AE9
@@ -897,17 +885,6 @@ F 1 "D" V 5355 771 50  0000 R CNN
 F 2 "Diode_THT:D_T-1_P5.08mm_Horizontal" H 5400 850 50  0001 C CNN
 F 3 "~" H 5400 850 50  0001 C CNN
 	1    5400 850 
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:R R_T1
-U 1 1 5E3B3275
-P 5550 1000
-F 0 "R_T1" H 5620 1046 50  0000 L CNN
-F 1 "1K" H 5620 955 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P5.08mm_Vertical" V 5480 1000 50  0001 C CNN
-F 3 "~" H 5550 1000 50  0001 C CNN
-	1    5550 1000
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -949,8 +926,6 @@ Wire Wire Line
 	5100 700  4300 700 
 Wire Wire Line
 	4300 700  4300 800 
-Wire Wire Line
-	4300 900  5100 900 
 Wire Wire Line
 	5550 1500 5550 1300
 Connection ~ 5550 1300
@@ -1116,14 +1091,52 @@ F 3 "~" H 9050 5050 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0126
 U 1 1 5E5F3BCE
 P 3850 1850
-F 0 "#PWR?" H 3850 1600 50  0001 C CNN
+F 0 "#PWR0126" H 3850 1600 50  0001 C CNN
 F 1 "GND" V 3855 1722 50  0000 R CNN
 F 2 "" H 3850 1850 50  0001 C CNN
 F 3 "" H 3850 1850 50  0001 C CNN
 	1    3850 1850
 	0    1    -1   0   
 $EndComp
+Connection ~ 5400 1000
+$Comp
+L Device:R R_T1
+U 1 1 5E3B3275
+P 5550 1000
+F 0 "R_T1" H 5620 1046 50  0000 L CNN
+F 1 "1K" H 5620 955 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P5.08mm_Vertical" V 5480 1000 50  0001 C CNN
+F 3 "~" H 5550 1000 50  0001 C CNN
+	1    5550 1000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Transistor_BJT:TIP120 Q1
+U 1 1 5E39FC69
+P 5900 1000
+F 0 "Q1" H 6107 1046 50  0000 L CNN
+F 1 "TIP120" H 6107 955 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 6100 925 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 5900 1000 50  0001 L CNN
+	1    5900 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5E5F87D4
+P 4800 900
+F 0 "R1" H 4870 946 50  0000 L CNN
+F 1 "?" H 4870 855 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 4730 900 50  0001 C CNN
+F 3 "~" H 4800 900 50  0001 C CNN
+	1    4800 900 
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4950 900  5100 900 
+Wire Wire Line
+	4650 900  4300 900 
 $EndSCHEMATC
