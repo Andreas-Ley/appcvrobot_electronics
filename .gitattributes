@@ -1,0 +1,7 @@
+*.kicad_mod text=auto
+*.kicad_pcb text=auto
+*.pro text=auto
+*.sch text=auto
+*.lib text=auto
+*lib-table text=auto
+
