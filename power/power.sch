@@ -97,28 +97,6 @@ F 3 "" H 7250 1000 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GND #PWR0108
-U 1 1 5DA09678
-P 6000 800
-F 0 "#PWR0108" H 6000 550 50  0001 C CNN
-F 1 "GND" V 6005 672 50  0000 R CNN
-F 2 "" H 6000 800 50  0001 C CNN
-F 3 "" H 6000 800 50  0001 C CNN
-	1    6000 800 
-	0    1    1    0   
-$EndComp
-$Comp
-L power:GND #PWR0106
-U 1 1 5DA10D38
-P 6300 2900
-F 0 "#PWR0106" H 6300 2650 50  0001 C CNN
-F 1 "GND" V 6305 2772 50  0000 R CNN
-F 2 "" H 6300 2900 50  0001 C CNN
-F 3 "" H 6300 2900 50  0001 C CNN
-	1    6300 2900
-	0    1    1    0   
-$EndComp
-$Comp
 L Custom:ACS712Breakout CurrentSensor1
 U 1 1 5D915264
 P 7500 2900
@@ -622,102 +600,9 @@ F 3 "" H 10300 3750 50  0001 C CNN
 $EndComp
 Text Notes 9200 900  0    157  ~ 0
 Power Board
-$Comp
-L Connector_Generic:Conn_01x04 Switch_Connector1
-U 1 1 5D9591F2
-P 6600 3100
-F 0 "Switch_Connector1" H 6680 3142 50  0000 L CNN
-F 1 "Conn_01x04" H 6680 3051 50  0000 L CNN
-F 2 "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical" H 6600 3100 50  0001 C CNN
-F 3 "~" H 6600 3100 50  0001 C CNN
-	1    6600 3100
-	0    -1   1    0   
-$EndComp
 Wire Wire Line
 	7000 1800 7000 2800
 Connection ~ 7000 1800
-Wire Wire Line
-	6700 2900 6800 2900
-Wire Wire Line
-	6300 2900 6500 2900
-Wire Wire Line
-	6800 2900 7000 2900
-Connection ~ 6800 2900
-Wire Wire Line
-	6600 2900 6500 2900
-Connection ~ 6500 2900
-$Comp
-L power:+BATT #PWR0156
-U 1 1 5E3AD85F
-P 5100 700
-F 0 "#PWR0156" H 5100 550 50  0001 C CNN
-F 1 "+BATT" H 5115 873 50  0000 C CNN
-F 2 "" H 5100 700 50  0001 C CNN
-F 3 "" H 5100 700 50  0001 C CNN
-	1    5100 700 
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R_T1
-U 1 1 5E3B3275
-P 5550 1000
-F 0 "R_T1" H 5620 1046 50  0000 L CNN
-F 1 "1K" H 5620 955 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P5.08mm_Vertical" V 5480 1000 50  0001 C CNN
-F 3 "~" H 5550 1000 50  0001 C CNN
-	1    5550 1000
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:D Diode1
-U 1 1 5E3B6AE9
-P 5400 850
-F 0 "Diode1" V 5446 771 50  0000 R CNN
-F 1 "D" V 5355 771 50  0000 R CNN
-F 2 "Diode_THT:D_T-1_P5.08mm_Horizontal" H 5400 850 50  0001 C CNN
-F 3 "~" H 5400 850 50  0001 C CNN
-	1    5400 850 
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Transistor_BJT:TIP120 Q1
-U 1 1 5E39FC69
-P 5900 1000
-F 0 "Q1" H 6107 1046 50  0000 L CNN
-F 1 "TIP120" H 6107 955 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 6100 925 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 5900 1000 50  0001 L CNN
-	1    5900 1000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6000 1200 6500 1200
-Wire Wire Line
-	6500 1200 6500 1100
-Wire Wire Line
-	6500 1100 7250 1100
-Wire Wire Line
-	5100 700  5100 1000
-Wire Wire Line
-	5100 1000 5400 1000
-Connection ~ 5400 1000
-$Comp
-L Device:R_POT_TRIM RV1
-U 1 1 5E3D564D
-P 5100 1150
-F 0 "RV1" H 5030 1104 50  0000 R CNN
-F 1 "R_POT_TRIM" H 5030 1195 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical" H 5100 1150 50  0001 C CNN
-F 3 "~" H 5100 1150 50  0001 C CNN
-	1    5100 1150
-	-1   0    0    1   
-$EndComp
-Connection ~ 5100 1000
-Wire Wire Line
-	5100 1300 6000 1300
-Wire Wire Line
-	6000 1300 6000 1200
-Connection ~ 6000 1200
 $Comp
 L Connector:Conn_01x11_Male Con_PowerBoard2MainBoard1
 U 1 1 5D94E0AE
@@ -732,8 +617,6 @@ $EndComp
 Text GLabel 10300 4350 0    50   Input ~ 0
 P_Check
 Text GLabel 10300 4250 0    50   Input ~ 0
-P_IN
-Text GLabel 5400 700  1    50   Input ~ 0
 P_IN
 $Comp
 L power:GND #PWR0127
@@ -758,546 +641,127 @@ F 3 "" H 10300 3550 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:+BATT #PWR0133
-U 1 1 5E43F9A9
-P 1250 1900
-F 0 "#PWR0133" H 1250 1750 50  0001 C CNN
-F 1 "+BATT" V 1265 2027 50  0000 L CNN
-F 2 "" H 1250 1900 50  0001 C CNN
-F 3 "" H 1250 1900 50  0001 C CNN
-	1    1250 1900
-	0    1    -1   0   
-$EndComp
-$Comp
-L power:GND #PWR0128
-U 1 1 5E41494B
-P 1250 2100
-F 0 "#PWR0128" H 1250 1850 50  0001 C CNN
-F 1 "GND" V 1255 1972 50  0000 R CNN
-F 2 "" H 1250 2100 50  0001 C CNN
-F 3 "" H 1250 2100 50  0001 C CNN
-	1    1250 2100
-	0    -1   1    0   
-$EndComp
-Text GLabel 4950 1150 0    50   Input ~ 0
-P_Check
-Text GLabel 2200 2600 3    40   Input ~ 0
-PCheck
-Text GLabel 1700 1700 0    40   Input ~ 0
-PowerIN
-Text GLabel 1250 1200 2    40   Input ~ 0
-PowerIN
-Text GLabel 1250 1100 2    40   Input ~ 0
-PCheck
-Wire Wire Line
-	1700 1600 1250 1600
-Wire Wire Line
-	1250 1500 1700 1500
-Wire Wire Line
-	1700 1400 1250 1400
-Wire Wire Line
-	1250 1300 1700 1300
-$Comp
-L Connector:Conn_01x11_Female Con_MainBoard2PowerBoard1
-U 1 1 5DA6255C
-P 1050 1600
-F 0 "Con_MainBoard2PowerBoard1" H 942 975 50  0000 C CNN
-F 1 "Conn_01x09_Female" H 942 1066 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x11_P2.54mm_Vertical" H 1050 1600 50  0001 C CNN
-F 3 "~" H 1050 1600 50  0001 C CNN
-	1    1050 1600
-	-1   0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0140
-U 1 1 5DA7682E
-P 1250 2000
-F 0 "#PWR0140" H 1250 1750 50  0001 C CNN
-F 1 "GND" V 1255 1872 50  0000 R CNN
-F 2 "" H 1250 2000 50  0001 C CNN
-F 3 "" H 1250 2000 50  0001 C CNN
-	1    1250 2000
-	0    -1   1    0   
-$EndComp
-$Comp
-L power:+5V #PWR0144
-U 1 1 5DA7C32B
-P 1250 1700
-F 0 "#PWR0144" H 1250 1550 50  0001 C CNN
-F 1 "+5V" V 1265 1828 50  0000 L CNN
-F 2 "" H 1250 1700 50  0001 C CNN
-F 3 "" H 1250 1700 50  0001 C CNN
-	1    1250 1700
-	0    1    -1   0   
-$EndComp
-$Comp
-L power:+BATT #PWR0142
-U 1 1 5DA79136
-P 1250 1800
-F 0 "#PWR0142" H 1250 1650 50  0001 C CNN
-F 1 "+BATT" V 1265 1927 50  0000 L CNN
-F 2 "" H 1250 1800 50  0001 C CNN
-F 3 "" H 1250 1800 50  0001 C CNN
-	1    1250 1800
-	0    1    -1   0   
-$EndComp
-$Comp
-L Custom:LevelShifter U1
-U 1 1 5D8DEC02
-P 3400 3150
-F 0 "U1" V 2935 3200 50  0000 C CNN
-F 1 "LevelShifter" V 3026 3200 50  0000 C CNN
-F 2 "CustomFootprints:LevelShifterBreakoutBoard" H 3200 2350 50  0001 C CNN
-F 3 "" H 3400 3050 512 0001 C CNN
-	1    3400 3150
+L power:GND #PWR0101
+U 1 1 5E3FBA77
+P 7150 1100
+F 0 "#PWR0101" H 7150 850 50  0001 C CNN
+F 1 "GND" V 7155 972 50  0000 R CNN
+F 2 "" H 7150 1100 50  0001 C CNN
+F 3 "" H 7150 1100 50  0001 C CNN
+	1    7150 1100
 	0    1    1    0   
 $EndComp
-Text GLabel 1700 1800 0    40   Input ~ 0
-MS3_L
-Text GLabel 1700 1900 0    40   Input ~ 0
-MS2_L
-Text GLabel 1700 2000 0    40   Input ~ 0
-MS1_L
-$Comp
-L Driver_Motor:Pololu_Breakout_A4988 MD_L1
-U 1 1 5D86D179
-P 2200 4400
-F 0 "MD_L1" H 2900 5000 50  0000 C CNN
-F 1 "Pololu_Breakout_A4988" H 3150 5100 50  0000 C CNN
-F 2 "Module:Pololu_Breakout-16_15.2x20.3mm" H 2475 3650 50  0001 L CNN
-F 3 "https://www.pololu.com/product/2980/pictures" H 2300 4100 50  0001 C CNN
-	1    2200 4400
-	1    0    0    -1  
-$EndComp
-Text GLabel 3100 1800 2    40   Input ~ 0
-MS3_R
-Text GLabel 3100 1900 2    40   Input ~ 0
-MS2_R
-Text GLabel 3100 2000 2    40   Input ~ 0
-MS1_R
-Text GLabel 1800 4700 0    50   Input ~ 0
-MS1_L
 Wire Wire Line
-	4150 3050 4150 2700
+	7150 1100 7250 1100
+Text GLabel 5400 700  1    50   Input ~ 0
+P_IN
 Wire Wire Line
-	3900 3050 4150 3050
+	6000 1300 6000 1200
 Wire Wire Line
-	4050 2950 4050 2700
-Wire Wire Line
-	3900 2950 4050 2950
+	5100 1300 5550 1300
+Connection ~ 5100 1000
 $Comp
-L power:+5V #PWR0155
-U 1 1 5D8FC885
-P 3900 3150
-F 0 "#PWR0155" H 3900 3000 50  0001 C CNN
-F 1 "+5V" V 3915 3278 50  0000 L CNN
-F 2 "" H 3900 3150 50  0001 C CNN
-F 3 "" H 3900 3150 50  0001 C CNN
-	1    3900 3150
-	0    1    1    0   
-$EndComp
-$Comp
-L power:GND #PWR0154
-U 1 1 5D8F384B
-P 3900 3250
-F 0 "#PWR0154" H 3900 3000 50  0001 C CNN
-F 1 "GND" V 3905 3122 50  0000 R CNN
-F 2 "" H 3900 3250 50  0001 C CNN
-F 3 "" H 3900 3250 50  0001 C CNN
-	1    3900 3250
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR0153
-U 1 1 5D8F346A
-P 3000 3250
-F 0 "#PWR0153" H 3000 3000 50  0001 C CNN
-F 1 "GND" V 3005 3122 50  0000 R CNN
-F 2 "" H 3000 3250 50  0001 C CNN
-F 3 "" H 3000 3250 50  0001 C CNN
-	1    3000 3250
-	0    1    1    0   
-$EndComp
-$Comp
-L power:+3.3V #PWR0152
-U 1 1 5D8F2EF3
-P 3000 3150
-F 0 "#PWR0152" H 3000 3000 50  0001 C CNN
-F 1 "+3.3V" V 3015 3278 50  0000 L CNN
-F 2 "" H 3000 3150 50  0001 C CNN
-F 3 "" H 3000 3150 50  0001 C CNN
-	1    3000 3150
-	0    -1   -1   0   
-$EndComp
-Text GLabel 3000 3050 0    50   Input ~ 0
-I2C_SCL
-Text GLabel 3000 2950 0    50   Input ~ 0
-I2C_SDA
-$Comp
-L power:GND #PWR0151
-U 1 1 5D8CA2E5
-P 4250 2700
-F 0 "#PWR0151" H 4250 2450 50  0001 C CNN
-F 1 "GND" V 4255 2572 50  0000 R CNN
-F 2 "" H 4250 2700 50  0001 C CNN
-F 3 "" H 4250 2700 50  0001 C CNN
-	1    4250 2700
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR0150
-U 1 1 5D8C9E57
-P 4350 2700
-F 0 "#PWR0150" H 4350 2550 50  0001 C CNN
-F 1 "+5V" V 4365 2828 50  0000 L CNN
-F 2 "" H 4350 2700 50  0001 C CNN
-F 3 "" H 4350 2700 50  0001 C CNN
-	1    4350 2700
+L Device:R_POT_TRIM RV1
+U 1 1 5E3D564D
+P 5100 1150
+F 0 "RV1" H 5030 1104 50  0000 R CNN
+F 1 "R_POT_TRIM" H 5030 1195 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical" H 5100 1150 50  0001 C CNN
+F 3 "~" H 5100 1150 50  0001 C CNN
+	1    5100 1150
 	-1   0    0    1   
 $EndComp
+Connection ~ 5400 1000
+Wire Wire Line
+	5100 1000 5400 1000
 $Comp
-L Connector_Generic:Conn_01x04 Display_Connector1
-U 1 1 5D8C83D4
-P 4250 2500
-F 0 "Display_Connector1" H 4330 2542 50  0000 L CNN
-F 1 "Conn_01x04" H 4330 2451 50  0000 L CNN
-F 2 "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical" H 4250 2500 50  0001 C CNN
-F 3 "~" H 4250 2500 50  0001 C CNN
-	1    4250 2500
-	0    1    -1   0   
-$EndComp
-Text Notes 3400 700  0    157  ~ 0
-Main Board
-Wire Notes Line
-	4800 500  4800 7800
-$Comp
-L power:GND #PWR0112
-U 1 1 5DA24258
-P 1050 7250
-F 0 "#PWR0112" H 1050 7000 50  0001 C CNN
-F 1 "GND" H 1055 7077 50  0000 C CNN
-F 2 "" H 1050 7250 50  0001 C CNN
-F 3 "" H 1050 7250 50  0001 C CNN
-	1    1050 7250
+L Transistor_BJT:TIP120 Q1
+U 1 1 5E39FC69
+P 5900 1000
+F 0 "Q1" H 6107 1046 50  0000 L CNN
+F 1 "TIP120" H 6107 955 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 6100 925 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 5900 1000 50  0001 L CNN
+	1    5900 1000
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0110
-U 1 1 5DA23E7F
-P 1000 5000
-F 0 "#PWR0110" H 1000 4750 50  0001 C CNN
-F 1 "GND" H 1005 4827 50  0000 C CNN
-F 2 "" H 1000 5000 50  0001 C CNN
-F 3 "" H 1000 5000 50  0001 C CNN
-	1    1000 5000
+L Device:D Diode1
+U 1 1 5E3B6AE9
+P 5400 850
+F 0 "Diode1" V 5446 771 50  0000 R CNN
+F 1 "D" V 5355 771 50  0000 R CNN
+F 2 "Diode_THT:D_T-1_P5.08mm_Horizontal" H 5400 850 50  0001 C CNN
+F 3 "~" H 5400 850 50  0001 C CNN
+	1    5400 850 
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R_T1
+U 1 1 5E3B3275
+P 5550 1000
+F 0 "R_T1" H 5620 1046 50  0000 L CNN
+F 1 "1K" H 5620 955 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P5.08mm_Vertical" V 5480 1000 50  0001 C CNN
+F 3 "~" H 5550 1000 50  0001 C CNN
+	1    5550 1000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+BATT #PWR0156
+U 1 1 5E3AD85F
+P 5100 700
+F 0 "#PWR0156" H 5100 550 50  0001 C CNN
+F 1 "+BATT" H 5115 873 50  0000 C CNN
+F 2 "" H 5100 700 50  0001 C CNN
+F 3 "" H 5100 700 50  0001 C CNN
+	1    5100 700 
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3.3V #PWR0123
-U 1 1 5DA22F82
-P 2200 5950
-F 0 "#PWR0123" H 2200 5800 50  0001 C CNN
-F 1 "+3.3V" H 2215 6123 50  0000 C CNN
-F 2 "" H 2200 5950 50  0001 C CNN
-F 3 "" H 2200 5950 50  0001 C CNN
-	1    2200 5950
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0114
-U 1 1 5DA21328
-P 2400 5200
-F 0 "#PWR0114" H 2400 4950 50  0001 C CNN
-F 1 "GND" H 2405 5027 50  0000 C CNN
-F 2 "" H 2400 5200 50  0001 C CNN
-F 3 "" H 2400 5200 50  0001 C CNN
-	1    2400 5200
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0113
-U 1 1 5DA20DA6
-P 2400 7450
-F 0 "#PWR0113" H 2400 7200 50  0001 C CNN
-F 1 "GND" H 2405 7277 50  0000 C CNN
-F 2 "" H 2400 7450 50  0001 C CNN
-F 3 "" H 2400 7450 50  0001 C CNN
-	1    2400 7450
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x04 Con_Motor_R1
-U 1 1 5D9F088D
-P 2900 6650
-F 0 "Con_Motor_R1" H 2980 6642 50  0000 L CNN
-F 1 "Conn_01x04" H 2980 6551 50  0000 L CNN
-F 2 "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical" H 2900 6650 50  0001 C CNN
-F 3 "~" H 2900 6650 50  0001 C CNN
-	1    2900 6650
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x04 Con_Motor_L1
-U 1 1 5D9EF24A
-P 2900 4400
-F 0 "Con_Motor_L1" H 2980 4392 50  0000 L CNN
-F 1 "Conn_01x04" H 2980 4301 50  0000 L CNN
-F 2 "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical" H 2900 4400 50  0001 C CNN
-F 3 "~" H 2900 4400 50  0001 C CNN
-	1    2900 4400
-	1    0    0    -1  
-$EndComp
-Text GLabel 1300 3150 0    50   Input ~ 0
-I2C_SCL
-Text GLabel 1300 3050 0    50   Input ~ 0
-I2C_SDA
-$Comp
-L Connector_Generic:Conn_01x05 RPi_Connector1
-U 1 1 5D98DCAA
-P 1500 3250
-F 0 "RPi_Connector1" H 1580 3292 50  0000 L CNN
-F 1 "Conn_01x05" H 1580 3201 50  0000 L CNN
-F 2 "Connector_JST:JST_XH_B5B-XH-A_1x05_P2.50mm_Vertical" H 1500 3250 50  0001 C CNN
-F 3 "~" H 1500 3250 50  0001 C CNN
-	1    1500 3250
-	1    0    0    -1  
-$EndComp
-Text GLabel 3100 2300 2    50   Input ~ 0
-Enable_Steppers
-$Comp
-L power:+3.3V #PWR0124
-U 1 1 5D96A320
-P 1700 1200
-F 0 "#PWR0124" H 1700 1050 50  0001 C CNN
-F 1 "+3.3V" V 1715 1328 50  0000 L CNN
-F 2 "" H 1700 1200 50  0001 C CNN
-F 3 "" H 1700 1200 50  0001 C CNN
-	1    1700 1200
-	0    -1   1    0   
-$EndComp
-$Comp
-L power:GND #PWR0122
-U 1 1 5D968DD5
-P 1700 1000
-F 0 "#PWR0122" H 1700 750 50  0001 C CNN
-F 1 "GND" V 1705 872 50  0000 R CNN
-F 2 "" H 1700 1000 50  0001 C CNN
-F 3 "" H 1700 1000 50  0001 C CNN
-	1    1700 1000
-	0    1    -1   0   
-$EndComp
-$Comp
-L power:GND #PWR0121
-U 1 1 5D968847
-P 3100 1600
-F 0 "#PWR0121" H 3100 1350 50  0001 C CNN
-F 1 "GND" V 3105 1472 50  0000 R CNN
-F 2 "" H 3100 1600 50  0001 C CNN
-F 3 "" H 3100 1600 50  0001 C CNN
-	1    3100 1600
-	0    -1   1    0   
-$EndComp
-$Comp
-L power:GND #PWR0120
-U 1 1 5D968341
-P 2400 2600
-F 0 "#PWR0120" H 2400 2350 50  0001 C CNN
-F 1 "GND" H 2405 2427 50  0000 C CNN
-F 2 "" H 2400 2600 50  0001 C CNN
-F 3 "" H 2400 2600 50  0001 C CNN
-	1    2400 2600
-	-1   0    0    -1  
-$EndComp
-Text GLabel 1900 2600 3    50   Input ~ 0
-I2C_SCL
-Text GLabel 2000 2600 3    50   Input ~ 0
-I2C_SDA
-$Comp
-L Custom:IZOKEEProMini MicroController1
-U 1 1 5D9626D5
-P 2300 1700
-F 0 "MicroController1" H 2200 2765 50  0000 C CNN
-F 1 "IZOKEEProMini" H 2200 2674 50  0000 C CNN
-F 2 "CustomFootprints:Arduino_Pro_Mini_Socket_IZOKEE" H 2200 800 50  0001 C CNN
-F 3 "" H 2200 800 50  0001 C CNN
-	1    2300 1700
+L Connector_Generic:Conn_01x02 Switch_Connector1
+U 1 1 5D9591F2
+P 4100 800
+F 0 "Switch_Connector1" H 4180 842 50  0000 L CNN
+F 1 "Conn_01x04" H 4180 751 50  0000 L CNN
+F 2 "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical" H 4100 800 50  0001 C CNN
+F 3 "~" H 4100 800 50  0001 C CNN
+	1    4100 800 
 	-1   0    0    -1  
 $EndComp
 $Comp
-L power:+3.3V #PWR0118
-U 1 1 5D93BF08
-P 2200 3700
-F 0 "#PWR0118" H 2200 3550 50  0001 C CNN
-F 1 "+3.3V" H 2215 3873 50  0000 C CNN
-F 2 "" H 2200 3700 50  0001 C CNN
-F 3 "" H 2200 3700 50  0001 C CNN
-	1    2200 3700
-	1    0    0    -1  
-$EndComp
-Text GLabel 3100 1300 2    50   Input ~ 0
-Dir_R
-Text GLabel 3100 1400 2    50   Input ~ 0
-Step_R
-Text GLabel 3100 2100 2    50   Input ~ 0
-Dir_L
-Text GLabel 3100 2200 2    50   Input ~ 0
-Step_L
-Text GLabel 1800 6550 0    50   Input ~ 0
-Enable_Steppers
-Text GLabel 1800 4300 0    50   Input ~ 0
-Enable_Steppers
-Text GLabel 1800 6650 0    50   Input ~ 0
-Step_R
-Text GLabel 1800 4400 0    50   Input ~ 0
-Step_L
-Text GLabel 1800 6750 0    50   Input ~ 0
-Dir_R
-Text GLabel 1800 4500 0    50   Input ~ 0
-Dir_L
-Wire Wire Line
-	1800 4000 1800 4100
-Wire Wire Line
-	1800 6250 1800 6350
-$Comp
-L power:GND #PWR0119
-U 1 1 5D8A3A28
-P 2200 7450
-F 0 "#PWR0119" H 2200 7200 50  0001 C CNN
-F 1 "GND" H 2205 7277 50  0000 C CNN
-F 2 "" H 2200 7450 50  0001 C CNN
-F 3 "" H 2200 7450 50  0001 C CNN
-	1    2200 7450
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0117
-U 1 1 5D8A1B7E
-P 2200 5200
-F 0 "#PWR0117" H 2200 4950 50  0001 C CNN
-F 1 "GND" H 2205 5027 50  0000 C CNN
-F 2 "" H 2200 5200 50  0001 C CNN
-F 3 "" H 2200 5200 50  0001 C CNN
-	1    2200 5200
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+BATT #PWR0116
-U 1 1 5D8A16C7
-P 2400 5950
-F 0 "#PWR0116" H 2400 5800 50  0001 C CNN
-F 1 "+BATT" H 2415 6123 50  0000 C CNN
-F 2 "" H 2400 5950 50  0001 C CNN
-F 3 "" H 2400 5950 50  0001 C CNN
-	1    2400 5950
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+BATT #PWR0115
-U 1 1 5D8A104B
-P 2400 3700
-F 0 "#PWR0115" H 2400 3550 50  0001 C CNN
-F 1 "+BATT" H 2415 3873 50  0000 C CNN
-F 2 "" H 2400 3700 50  0001 C CNN
-F 3 "" H 2400 3700 50  0001 C CNN
-	1    2400 3700
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+BATT #PWR0111
-U 1 1 5D899AE0
-P 1050 6950
-F 0 "#PWR0111" H 1050 6800 50  0001 C CNN
-F 1 "+BATT" H 1065 7123 50  0000 C CNN
-F 2 "" H 1050 6950 50  0001 C CNN
-F 3 "" H 1050 6950 50  0001 C CNN
-	1    1050 6950
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+BATT #PWR0109
-U 1 1 5D898B5F
-P 1000 4700
-F 0 "#PWR0109" H 1000 4550 50  0001 C CNN
-F 1 "+BATT" H 1015 4873 50  0000 C CNN
-F 2 "" H 1000 4700 50  0001 C CNN
-F 3 "" H 1000 4700 50  0001 C CNN
-	1    1000 4700
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0104
-U 1 1 5D882AE2
-P 1300 3250
-F 0 "#PWR0104" H 1300 3000 50  0001 C CNN
-F 1 "GND" V 1305 3122 50  0000 R CNN
-F 2 "" H 1300 3250 50  0001 C CNN
-F 3 "" H 1300 3250 50  0001 C CNN
-	1    1300 3250
+L power:GND #PWR0106
+U 1 1 5DA10D38
+P 6000 800
+F 0 "#PWR0106" H 6000 550 50  0001 C CNN
+F 1 "GND" V 6005 672 50  0000 R CNN
+F 2 "" H 6000 800 50  0001 C CNN
+F 3 "" H 6000 800 50  0001 C CNN
+	1    6000 800 
 	0    1    1    0   
 $EndComp
-$Comp
-L power:+3.3V #PWR0102
-U 1 1 5D8820D7
-P 1300 3350
-F 0 "#PWR0102" H 1300 3200 50  0001 C CNN
-F 1 "+3.3V" V 1315 3478 50  0000 L CNN
-F 2 "" H 1300 3350 50  0001 C CNN
-F 3 "" H 1300 3350 50  0001 C CNN
-	1    1300 3350
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:+5V #PWR0101
-U 1 1 5D881952
-P 1300 3450
-F 0 "#PWR0101" H 1300 3300 50  0001 C CNN
-F 1 "+5V" V 1315 3578 50  0000 L CNN
-F 2 "" H 1300 3450 50  0001 C CNN
-F 3 "" H 1300 3450 50  0001 C CNN
-	1    1300 3450
-	0    -1   -1   0   
-$EndComp
-Text GLabel 1800 7150 0    50   Input ~ 0
-MS3_R
-Text GLabel 1800 4900 0    50   Input ~ 0
-MS3_L
-Text GLabel 1800 7050 0    50   Input ~ 0
-MS2_R
-Text GLabel 1800 4800 0    50   Input ~ 0
-MS2_L
-Text GLabel 1800 6950 0    50   Input ~ 0
-MS1_R
-$Comp
-L Device:CP C_MD_L2
-U 1 1 5D878D95
-P 1050 7100
-F 0 "C_MD_L2" H 1168 7146 50  0000 L CNN
-F 1 "100uF" H 1168 7055 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 1088 6950 50  0001 C CNN
-F 3 "~" H 1050 7100 50  0001 C CNN
-	1    1050 7100
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:CP C_MD_L1
-U 1 1 5D8782D3
-P 1000 4850
-F 0 "C_MD_L1" H 1118 4896 50  0000 L CNN
-F 1 "100uF" H 1118 4805 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 1038 4700 50  0001 C CNN
-F 3 "~" H 1000 4850 50  0001 C CNN
-	1    1000 4850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Driver_Motor:Pololu_Breakout_A4988 MD_R1
-U 1 1 5D876F4D
-P 2200 6650
-F 0 "MD_R1" H 2900 7050 50  0000 C CNN
-F 1 "Pololu_Breakout_A4988" H 3100 7150 50  0000 C CNN
-F 2 "Module:Pololu_Breakout-16_15.2x20.3mm" H 2475 5900 50  0001 L CNN
-F 3 "https://www.pololu.com/product/2980/pictures" H 2300 6350 50  0001 C CNN
-	1    2200 6650
-	1    0    0    -1  
-$EndComp
+Wire Wire Line
+	5100 900  5100 1000
+Wire Wire Line
+	5100 700  4300 700 
+Wire Wire Line
+	4300 700  4300 800 
+Wire Wire Line
+	4300 900  5100 900 
+Wire Wire Line
+	5550 1500 5550 1300
+Connection ~ 5550 1300
+Wire Wire Line
+	5550 1300 6000 1300
+Connection ~ 7250 1100
+Wire Wire Line
+	7250 1100 7350 1100
+Wire Wire Line
+	7000 2900 5050 2900
+Wire Wire Line
+	5050 2900 5050 1500
+Wire Wire Line
+	5050 1500 5550 1500
+Text GLabel 4950 1150 0    50   Input ~ 0
+P_Check
 $EndSCHEMATC
