@@ -714,11 +714,11 @@ F 3 "" H 8200 2650 50  0001 C CNN
 $EndComp
 Text GLabel 4600 1700 1    50   Input ~ 0
 P_Sw_Sense
-Text GLabel 10300 5950 0    40   Input ~ 0
+Text GLabel 10300 5800 0    40   Input ~ 0
 ADC_Batt_12
-Text GLabel 7250 5950 0    40   Input ~ 0
+Text GLabel 7250 5800 0    40   Input ~ 0
 ADC_Batt_P
-Text GLabel 8850 5950 0    40   Input ~ 0
+Text GLabel 8850 5800 0    40   Input ~ 0
 ADC_Batt_23
 Text GLabel 10650 2700 2    40   Input ~ 0
 ADC_Batt_Curr
@@ -741,41 +741,41 @@ F 3 "" H 4400 7350 50  0001 C CNN
 	1    4400 7350
 	0    1    1    0   
 $EndComp
-Text GLabel 9000 5400 1    50   Input ~ 0
+Text GLabel 9000 5250 1    50   Input ~ 0
 BATT_Cell_2_3
-Text GLabel 10450 5400 1    50   Input ~ 0
+Text GLabel 10450 5250 1    50   Input ~ 0
 BATT_Cell_1_2
 $Comp
 L Device:R_POT_TRIM POT_Batt_P1
 U 1 1 5E57EF6D
-P 7400 5950
-F 0 "POT_Batt_P1" H 7330 5904 50  0000 R CNN
-F 1 "100k" H 7330 5995 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical" H 7400 5950 50  0001 C CNN
-F 3 "~" H 7400 5950 50  0001 C CNN
-	1    7400 5950
+P 7400 5800
+F 0 "POT_Batt_P1" H 7330 5754 50  0000 R CNN
+F 1 "200k" H 7330 5845 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical" H 7400 5800 50  0001 C CNN
+F 3 "~" H 7400 5800 50  0001 C CNN
+	1    7400 5800
 	-1   0    0    1   
 $EndComp
 $Comp
 L Device:R_POT_TRIM POT_Batt_23
 U 1 1 5E59E0E2
-P 9000 5950
-F 0 "POT_Batt_23" H 8930 5904 50  0000 R CNN
-F 1 "100k" H 8930 5995 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical" H 9000 5950 50  0001 C CNN
-F 3 "~" H 9000 5950 50  0001 C CNN
-	1    9000 5950
+P 9000 5800
+F 0 "POT_Batt_23" H 8930 5754 50  0000 R CNN
+F 1 "200k" H 8930 5845 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical" H 9000 5800 50  0001 C CNN
+F 3 "~" H 9000 5800 50  0001 C CNN
+	1    9000 5800
 	-1   0    0    1   
 $EndComp
 $Comp
 L Device:R_POT_TRIM POT_Batt_12
 U 1 1 5E59F13C
-P 10450 5950
-F 0 "POT_Batt_12" H 10380 5904 50  0000 R CNN
-F 1 "100k" H 10380 5995 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical" H 10450 5950 50  0001 C CNN
-F 3 "~" H 10450 5950 50  0001 C CNN
-	1    10450 5950
+P 10450 5800
+F 0 "POT_Batt_12" H 10380 5754 50  0000 R CNN
+F 1 "200k" H 10380 5845 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical" H 10450 5800 50  0001 C CNN
+F 3 "~" H 10450 5800 50  0001 C CNN
+	1    10450 5800
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -843,45 +843,45 @@ Connection ~ 10550 2700
 $Comp
 L power:GND #PWR0128
 U 1 1 5E5BAC0A
-P 10450 6100
-F 0 "#PWR0128" H 10450 5850 50  0001 C CNN
-F 1 "GND" V 10455 5972 50  0000 R CNN
-F 2 "" H 10450 6100 50  0001 C CNN
-F 3 "" H 10450 6100 50  0001 C CNN
-	1    10450 6100
+P 10450 5950
+F 0 "#PWR0128" H 10450 5700 50  0001 C CNN
+F 1 "GND" V 10455 5822 50  0000 R CNN
+F 2 "" H 10450 5950 50  0001 C CNN
+F 3 "" H 10450 5950 50  0001 C CNN
+	1    10450 5950
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0129
 U 1 1 5E5BBA68
-P 9000 6100
-F 0 "#PWR0129" H 9000 5850 50  0001 C CNN
-F 1 "GND" V 9005 5972 50  0000 R CNN
-F 2 "" H 9000 6100 50  0001 C CNN
-F 3 "" H 9000 6100 50  0001 C CNN
-	1    9000 6100
+P 9000 5950
+F 0 "#PWR0129" H 9000 5700 50  0001 C CNN
+F 1 "GND" V 9005 5822 50  0000 R CNN
+F 2 "" H 9000 5950 50  0001 C CNN
+F 3 "" H 9000 5950 50  0001 C CNN
+	1    9000 5950
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+BATT #PWR0139
 U 1 1 5DA4010C
-P 7400 5400
-F 0 "#PWR0139" H 7400 5250 50  0001 C CNN
-F 1 "+BATT" V 7415 5527 50  0000 L CNN
-F 2 "" H 7400 5400 50  0001 C CNN
-F 3 "" H 7400 5400 50  0001 C CNN
-	1    7400 5400
+P 7400 5250
+F 0 "#PWR0139" H 7400 5100 50  0001 C CNN
+F 1 "+BATT" V 7415 5377 50  0000 L CNN
+F 2 "" H 7400 5250 50  0001 C CNN
+F 3 "" H 7400 5250 50  0001 C CNN
+	1    7400 5250
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0127
 U 1 1 5E5B9E5B
-P 7400 6100
-F 0 "#PWR0127" H 7400 5850 50  0001 C CNN
-F 1 "GND" V 7405 5972 50  0000 R CNN
-F 2 "" H 7400 6100 50  0001 C CNN
-F 3 "" H 7400 6100 50  0001 C CNN
-	1    7400 6100
+P 7400 5950
+F 0 "#PWR0127" H 7400 5700 50  0001 C CNN
+F 1 "GND" V 7405 5822 50  0000 R CNN
+F 2 "" H 7400 5950 50  0001 C CNN
+F 3 "" H 7400 5950 50  0001 C CNN
+	1    7400 5950
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1070,12 +1070,12 @@ $EndComp
 $Comp
 L Transistor_FET:TP0610L Q2
 U 1 1 5E9FB931
-P 7500 5600
-F 0 "Q2" H 7705 5554 50  0000 L CNN
-F 1 "ZVP2106A" H 7705 5645 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92L_Inline_Wide" H 7700 5525 50  0001 L CIN
-F 3 "" H 7500 5600 50  0001 L CNN
-	1    7500 5600
+P 7500 5450
+F 0 "Q2" H 7705 5404 50  0000 L CNN
+F 1 "ZVP2106A" H 7705 5495 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92L_Inline_Wide" H 7700 5375 50  0001 L CIN
+F 3 "" H 7500 5450 50  0001 L CNN
+	1    7500 5450
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -1091,33 +1091,33 @@ F 3 "" H 7900 1100 50  0001 C CNN
 $EndComp
 Text GLabel 8200 1300 2    40   Input ~ 0
 PowerGate
-Text GLabel 7700 5600 2    40   Input ~ 0
+Text GLabel 7700 5450 2    40   Input ~ 0
 PowerGate
 $Comp
 L Transistor_FET:TP0610L Q4
 U 1 1 5EA4093C
-P 9100 5600
-F 0 "Q4" H 9305 5554 50  0000 L CNN
-F 1 "ZVP2106A" H 9305 5645 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92L_Inline_Wide" H 9300 5525 50  0001 L CIN
-F 3 "" H 9100 5600 50  0001 L CNN
-	1    9100 5600
+P 9100 5450
+F 0 "Q4" H 9305 5404 50  0000 L CNN
+F 1 "ZVP2106A" H 9305 5495 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92L_Inline_Wide" H 9300 5375 50  0001 L CIN
+F 3 "" H 9100 5450 50  0001 L CNN
+	1    9100 5450
 	-1   0    0    1   
 $EndComp
-Text GLabel 9300 5600 2    40   Input ~ 0
+Text GLabel 9300 5450 2    40   Input ~ 0
 PowerGate
 $Comp
 L Transistor_FET:TP0610L Q5
 U 1 1 5EA48428
-P 10550 5600
-F 0 "Q5" H 10755 5554 50  0000 L CNN
-F 1 "ZVP2106A" H 10755 5645 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92L_Inline_Wide" H 10750 5525 50  0001 L CIN
-F 3 "" H 10550 5600 50  0001 L CNN
-	1    10550 5600
+P 10550 5450
+F 0 "Q5" H 10755 5404 50  0000 L CNN
+F 1 "ZVP2106A" H 10755 5495 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92L_Inline_Wide" H 10750 5375 50  0001 L CIN
+F 3 "" H 10550 5450 50  0001 L CNN
+	1    10550 5450
 	-1   0    0    1   
 $EndComp
-Text GLabel 10750 5600 2    40   Input ~ 0
+Text GLabel 10750 5450 2    40   Input ~ 0
 PowerGate
 $Comp
 L Device:R R_BaseLim1
@@ -1229,8 +1229,12 @@ Text GLabel 1350 2000 0    40   Input ~ 0
 MS1_L
 Text GLabel 1850 2600 3    40   Input ~ 0
 P_Sw_Sense
-Text Notes 7600 4700 0    39   ~ 0
-Transistors Q2, Q4, an Q5 optional: Bridge source drain and use higher resistance potis
 Text Notes 6950 800  0    39   ~ 0
 High side switch of supply voltage: +BATT is coming from battery,\n+12V is what is being switched on/off that the rest of the ciruit\nconnects to.
+Text Notes 6150 1750 0    39   ~ 0
+Adjust POT_PowerGate1 so that PowerGate drops\nto < 1V when switched on, otherwise Q5 does not open.
+Text Notes 6950 6500 0    39   ~ 0
+*BEFORE* plugging in the uC, adjust POT_Batt_x so that all ADC voltages are always < 3.3V.\nI recommend hitting 3.3V for 4.5V * [1, 2, 3] respectively.\nKeep in mind that Q5 might not fully open due to high PowerGate voltages.
+Text Notes 3600 2400 0    39   ~ 0
+*BEFORE* plugging in the uC, adjust\nPOT_P_Sw_Sense1 so that P_Sw_Sense\nis slightly below 3.3V for +BATT = 12.6V\nand the power button (Con_P_Sw1) pressed.
 $EndSCHEMATC
